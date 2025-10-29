@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl:*)",
+      "Bash(npx kill-port:*)",
+      "Bash(powershell -Command \"Remove-Item -Path ''src\\components\\Header'' -Recurse -Force; Remove-Item -Path ''src\\components\\Footer'' -Recurse -Force; Remove-Item -Path ''src\\components\\Providers'' -Recurse -Force; Remove-Item -Path ''src\\components\\LayoutWrapper'' -Recurse -Force; Remove-Item -Path ''src\\components\\LayoutContent'' -Recurse -Force; Write-Host ''All subdirectories removed successfully''\")",
+      "Bash(powershell -Command \"Get-ChildItem -Path ''src\\components'' -File | Select-Object Name\")",
+      "Bash(powershell -Command:*)",
+      "Bash(npm view:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run dev:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
