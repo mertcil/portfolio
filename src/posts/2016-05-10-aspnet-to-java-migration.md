@@ -4,12 +4,14 @@ date: "2016-05-10"
 author: "Mevlüt Mert Çİl"
 category: "System Modernization"
 tags: ["migration", "aspnet", "java", "legacy", "refactoring"]
-excerpt: "A case study in migrating legacy ASP.NET WebForms applications to modern Java Spring MVC architecture, including lessons learned and best practices."
+excerpt: "A case study in migrating legacy ASP.NET WebForms applications to Java Spring MVC, covering strategy, parallel runs, organizational change, and long-term evolution."
 ---
 
 # ASP.NET to Java Migration: Lessons from Modernizing Legacy Systems
 
 Legacy systems are a blessing and a curse. They power critical business operations but often become technical debt nightmares. My experience migrating a car fleet management system from ASP.NET WebForms to Java Spring MVC taught me invaluable lessons about modernization.
+
+We treated modernization as both a technical and organizational initiative. Stakeholders needed clear milestones, rollback plans, and transparent communication about user impacts.
 
 ## The Challenge: ASP.NET WebForms
 
@@ -161,3 +163,15 @@ Modernization isn't just about using new technology. It's about:
 - Reducing long-term costs
 
 The pain of migration is worth it when you're maintaining code for a decade.
+
+## Change Management and Parallel Runs
+
+We ran the new Java stack in parallel with the ASP.NET system for two release cycles. Feature flags routed a small percentage of users to the modernized UI, and daily comparisons of invoices, fleet reports, and usage metrics verified parity. This approach surfaced discrepancies early while giving the support team confidence that the new system matched business expectations.
+
+## Testing, Tooling, and Team Enablement
+
+Automated tests covered migration scripts, service logic, and REST controllers. Load tests ensured the new stack matched or exceeded previous throughput, while APM tools like New Relic monitored both environments side by side. We invested in training—pair programming sessions, knowledge-sharing brown bags, and documentation that mapped WebForms concepts to Spring equivalents. Modernization succeeds when the team feels empowered, not overwhelmed.
+
+## Long-Term Evolution
+
+Modernization doesn’t end at launch. After stabilizing the new platform, we incrementally refactored modules into Spring Boot microservices, introduced event streams for real-time reporting, and built CI/CD pipelines that deployed multiple times per week. Retrospectives captured lessons learned—what processes worked, where tooling faltered, and how to improve future migrations. By treating the migration as a continuous journey, we avoided slipping back into legacy habits.

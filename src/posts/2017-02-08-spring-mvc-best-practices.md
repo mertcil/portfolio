@@ -4,12 +4,14 @@ date: "2017-02-08"
 author: "Mevlüt Mert Çİl"
 category: "Web Development"
 tags: ["spring", "java", "mvc", "best-practices", "architecture"]
-excerpt: "Best practices for building robust, maintainable Java web applications using Spring MVC framework."
+excerpt: "Best practices for building robust, secure, observable, and well-governed Java web applications with Spring MVC."
 ---
 
 # Spring MVC Best Practices: Building Scalable Java Web Applications
 
 Spring Framework has become the de-facto standard for Java enterprise development. After building multiple Spring MVC applications, I want to share patterns and practices that lead to maintainable, scalable systems.
+
+Discipline around layering, configuration, and testing keeps Spring projects from devolving into monolithic controllers and tangled dependencies. Treat the framework as an enabler—not as a shortcut around sound architecture.
 
 ## Architecture Overview
 
@@ -211,3 +213,21 @@ public class AppConfig {
 6. Handle errors gracefully
 
 Spring's flexibility requires discipline, but following these practices ensures maintainable code at scale.
+
+## Observability and Security
+
+Instrument controllers and services with Micrometer to capture request latency, error rates, and downstream dependency health. Feed metrics into Prometheus or CloudWatch and surface dashboards that on-call engineers rely on daily. Combine structured logging with correlation IDs so cross-service traces are easy to follow.
+
+Security should be considered from day zero. Apply Spring Security with method-level annotations, configure CORS policies explicitly, and validate inputs with Bean Validation annotations. For external integrations, rotate secrets via environment variables or vaults, and sanitize all outbound logs to avoid leaking sensitive data.
+
+## Deployment Discipline and Documentation
+
+Automate builds with Gradle or Maven, run unit and integration tests in CI, and use containers or buildpacks for consistent deployments. Capture configuration details in README files and maintain ADRs for major architectural choices. When teams share context openly, Spring MVC applications remain approachable even as they scale to dozens of services and contributors.
+
+## Modern Tooling and Ecosystem Integration
+
+Spring keeps evolving. Explore WebFlux for reactive use cases, Spring Native for ahead-of-time compilation, and Spring Cloud for distributed patterns. Integrate with observability stacks (Micrometer → Prometheus/Grafana) and leverage Spring Boot actuators to expose health checks and metrics. Keeping an eye on the ecosystem lets you adopt innovations without compromising stability.
+
+## Mentorship and Team Practices
+
+Pair programming, code walkthroughs, and guild meetings disseminate Spring knowledge across teams. Encourage junior engineers to present brown-bag sessions on new features or patterns. Document conventions—naming, package layout, exception handling—so new services align with organizational norms. Culture amplifies tooling; together they ensure Spring MVC projects stay nimble over the long haul.

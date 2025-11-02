@@ -4,12 +4,14 @@ date: "2019-01-20"
 author: "Mevlüt Mert Çİl"
 category: "Real-Time Systems"
 tags: ["webrtc", "react", "node.js", "real-time", "video"]
-excerpt: "Insights from building Diyalog, a WebRTC-based online meeting platform, covering frontend React development and backend real-time infrastructure."
+excerpt: "Lessons from building Diyalog, a WebRTC meeting platform—from peer connections and resilience to scaling infrastructure, operations, privacy, and user experience."
 ---
 
 # WebRTC and Real-Time Communication: Building Diyalog Video Platform
 
 Real-time video communication over the web seemed like science fiction not long ago. WebRTC changed everything. Building Diyalog, a WebRTC-based meeting platform, taught me about the complexities of peer-to-peer communication, fallback mechanisms, and real-time performance.
+
+Latency budgets are unforgiving. Every millisecond across the signaling path, TURN relays, or UI render cycle compounds. We obsessed over instrumentation to catch regressions early and to understand how features impacted both bandwidth usage and CPU load on low-powered devices.
 
 ## WebRTC Architecture
 
@@ -248,3 +250,19 @@ class ResilientPeerConnection {
 6. **Users tolerate latency, not disconnections** - Reliability > perfection
 
 Building Diyalog was one of the most technically challenging projects I've worked on. Real-time communication exposes every weakness in your system—network, CPU, memory, and algorithm efficiency all matter.
+
+## Scaling Operations and Support
+
+As adoption grew, we needed predictable scaling. Autoscaling groups right-sized media servers based on concurrent participants, synthetic clients ran 24/7 to exercise signaling paths, and feature flags let us roll out codec tweaks safely. Support playbooks included steps for gathering browser logs, ICE candidates, and HAR files so we could reproduce tricky issues quickly.
+
+## Privacy, Compliance, and User Experience
+
+Handling live audio and video demands rigorous privacy controls. We encrypted recordings at rest, enforced least privilege access, and implemented consent prompts for screen sharing. UX mattered as much as engineering—clear connection indicators, graceful degradation to audio-only mode, and post-call feedback forms turned raw RTC plumbing into a trustworthy product experience.
+
+## Analytics and Product Insights
+
+To keep improving call quality, we tracked join success rate, average bitrate, network degradation incidents, and customer satisfaction scores. Dashboards correlated technical metrics with user sentiment, enabling targeted improvements. For example, we noticed higher drop rates on mobile networks, prompting optimizations to adaptive bitrate logic and UI hints that suggested switching to Wi-Fi.
+
+## Future Directions
+
+WebRTC continues to evolve with standardized data channels, end-to-end encryption for multiparty calls, and WebTransport integrations. Staying engaged with community forums and W3C updates ensures your platform keeps pace. Experiment with AI-driven noise suppression or background effects cautiously—evaluate CPU impact and gather user feedback before rolling out widely.

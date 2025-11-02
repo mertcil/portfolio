@@ -40,9 +40,10 @@ const Panel = styled('div')({
   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif',
 })
 
-const HeaderPanel = styled(Panel)({
+const HeaderPanel = styled('div')({
   width: '100%',
   marginTop: '2.5rem',
+  background: 'transparent',
 })
 
 export default function LayoutWrapper({ children }: { children: ReactNode }) {
