@@ -185,28 +185,27 @@ const REFERENCES: Reference[] = [
     name: 'Anıl ULUTÜRK',
     role: 'Software Engineer at Google, formerly a Software Engineer at Microsoft, Co-worker at Vestek',
     link: 'https://www.linkedin.com/in/anil-uluturk-34b25028/',
-    contact: 'Contact Info: +905467910400, aniluluturk@gmail.com',
   },
 ]
 
 const MainContent = styled('div')({
   width: '65%',
-  padding: '0.75rem 2.5rem 3rem',
+  padding: '0.75rem 1.6rem 2.5rem',
   boxSizing: 'border-box',
   overflowY: 'auto',
   display: 'flex',
   flexDirection: 'column',
-  gap: '2rem',
+  gap: '1.6rem',
 })
 
 const SectionCard = styled('div')({
   background: '#ffffff',
   borderRadius: '12px',
   border: '2px solid #e5e7eb',
-  padding: '1.75rem',
+  padding: '0.6rem 0.9rem 0.9rem',
   display: 'flex',
   flexDirection: 'column',
-  gap: '1.25rem',
+  gap: '1rem',
   transition: 'all 0.3s ease',
 
   '&:hover': {
@@ -237,7 +236,7 @@ const SummaryText = styled('p')({
 const ExperienceList = styled('div')({
   display: 'flex',
   flexDirection: 'column',
-  gap: '1.25rem',
+  gap: '1rem',
 })
 
 const ExperienceAccordion = styled(Accordion)({

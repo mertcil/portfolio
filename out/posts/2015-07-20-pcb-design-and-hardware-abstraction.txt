@@ -1,0 +1,111 @@
+1:"$Sreact.fragment"
+2:I[30824,["/_next/static/chunks/3d09cd434674fd7a.js","/_next/static/chunks/b8e925703210fbb6.js"],"default"]
+3:I[44781,["/_next/static/chunks/3d09cd434674fd7a.js","/_next/static/chunks/b8e925703210fbb6.js"],"default"]
+4:I[2971,["/_next/static/chunks/3d09cd434674fd7a.js","/_next/static/chunks/b8e925703210fbb6.js"],"default"]
+5:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+6:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+7:I[13642,["/_next/static/chunks/3d09cd434674fd7a.js","/_next/static/chunks/b8e925703210fbb6.js"],"default"]
+9:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+c:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"ViewportBoundary"]
+e:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"MetadataBoundary"]
+10:I[68027,[],"default"]
+:HL["/_next/static/chunks/ea087131c5486ee5.css","style"]
+0:{"P":null,"b":"rMiMceR7FvWc0hLF5gogZ","c":["","posts","2015-07-20-pcb-design-and-hardware-abstraction"],"q":"","i":false,"f":[[["",{"children":["posts",{"children":[["slug","2015-07-20-pcb-design-and-hardware-abstraction","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/ea087131c5486ee5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/3d09cd434674fd7a.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/b8e925703210fbb6.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","$L2",null,{"children":["$","$L3",null,{"children":[["$","$L4",null,{}],["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L7",null,{}]]}]}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L8",null,["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$Lc",null,{"children":"$@d"}],["$","div",null,{"hidden":true,"children":["$","$Le",null,{"children":["$","$a",null,{"name":"Next.Metadata","children":"$@f"}]}]}],null]}],false]],"m":"$undefined","G":["$10",[]],"s":false,"S":true}
+12:I[22016,["/_next/static/chunks/3d09cd434674fd7a.js","/_next/static/chunks/b8e925703210fbb6.js"],""]
+11:T71a,
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .back-link:hover {
+    color: #1e3a8a;
+  }
+
+  .markdown-content h2 { font-size: 1.8rem; font-weight: 600; color: #1e3a8a; margin-top: 2rem; margin-bottom: 1rem; }
+  .markdown-content h3 { font-size: 1.4rem; font-weight: 600; color: #1e3a8a; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .markdown-content p { margin-bottom: 1rem; line-height: 1.8; }
+  .markdown-content ul, .markdown-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .markdown-content li { margin-bottom: 0.5rem; line-height: 1.8; }
+  .markdown-content code { background: #f1f5f9; padding: 0.2rem 0.45rem; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 0.9em; color: #d63384; }
+  .markdown-content pre { background: #0f172a; color: #e2e8f0; padding: 1.25rem; border-radius: 12px; overflow-x: auto; margin-bottom: 1.75rem; font-family: 'Courier New', monospace; font-size: 0.9rem; line-height: 1.6; }
+  .markdown-content pre code { background: transparent; padding: 0; color: inherit; }
+  .markdown-content blockquote { border-left: 4px solid #2563eb; padding-left: 1rem; margin-left: 0; margin-bottom: 1rem; color: #475569; font-style: italic; }
+  .markdown-content a { color: #2563eb; text-decoration: underline; }
+  .markdown-content a:hover { color: #1e3a8a; }
+  .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.75rem; font-size: 0.9rem; }
+  .markdown-content th, .markdown-content td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+  .markdown-content th { background: #f8fafc; font-weight: 600; }
+  .markdown-content tr:hover { background: #f1f5f9; }
+13:T1227,<h1>PCB Design and Hardware Abstraction: From Schematic to Manufacturing</h1>
+<p>Hardware design bridges the gap between physics and software. After working on multiple PCB projects during my internships, I've learned that great hardware design requires the same attention to abstraction as great software design.</p>
+<p>Constraints stack up quickly: component lead times, thermal budgets, and EMC requirements compete with cost targets. Successful designs balance these factors while still leaving room for firmware teams to iterate.</p>
+<h2>From Schematic to PCB</h2>
+<p>The traditional PCB design flow is:</p>
+<ol>
+<li><strong>Schematic Design</strong> - Circuit theory comes alive</li>
+<li><strong>Component Selection</strong> - Balancing cost, availability, performance</li>
+<li><strong>Layout</strong> - The art of routing without signal integrity issues</li>
+<li><strong>Manufacturing</strong> - Dealing with real-world tolerances</li>
+</ol>
+<h2>Tools of the Trade</h2>
+<ul>
+<li><strong>ARES</strong> (PCB Layout) - Handling trace routing and layer management</li>
+<li><strong>Orcad</strong> (PSpice) - Simulation before manufacturing</li>
+<li><strong>Proteus</strong> - Integration of schematic and simulation</li>
+<li><strong>Cadence</strong> - Professional-grade design for complex projects</li>
+</ul>
+<h2>The Voltage Source Circuit Project</h2>
+<p>One of my early projects was designing a DC voltage source with adjustable output (-5V, +5V, and everything in between).</p>
+<pre><code>Components:
+- AC Input → Transformer → Rectifier Bridge
+- Smoothing Capacitor (filtering)
+- 555 Timer IC (oscillator/function generator)
+- Potentiometer (variable output)
+- Voltage Regulator (stabilization)
+</code></pre>
+<h2>Signal Integrity Challenges</h2>
+<p>When designing PCBs, you quickly learn that traces aren't just wires:</p>
+<pre><code>- Track width affects impedance
+- Via placement impacts signal quality
+- Ground planes reduce noise
+- Layer stackup determines signal propagation
+</code></pre>
+<h2>Hardware Abstraction in Firmware</h2>
+<p>Good firmware abstracts hardware complexity:</p>
+<pre><code class="language-c">// Hardware-specific code isolated
+hal_gpio_set_pin(GPIO_PORT_A, PIN_5, HIGH);
+hal_spi_send_byte(0xAA);
+
+// Application code remains hardware-agnostic
+sensor_read_value();
+actuator_move_to_position(target);
+</code></pre>
+<h2>Lessons Learned</h2>
+<ul>
+<li><strong>Design for manufacturability</strong> - Tight tolerances cost exponentially more</li>
+<li><strong>Simulate before building</strong> - PSpice and VHDL simulators are invaluable</li>
+<li><strong>Test early</strong> - Prototype with breadboards and oscilloscopes</li>
+<li><strong>Documentation matters</strong> - Future you will thank present you</li>
+</ul>
+<p>The intersection of hardware and software is where true embedded systems engineering happens.</p>
+<h2>Design for Manufacturability and Testing</h2>
+<p>Collaborate with fabrication partners early to understand panelization, drill tolerances, and recommended copper weights. Add test pads, fiducials, and headers that make bring-up faster. Boundary-scan (JTAG) and in-circuit test fixtures can save weeks of debugging by catching solder bridges or component swaps before boards reach engineers.</p>
+<h2>Firmware Collaboration and Iteration</h2>
+<p>Hardware abstraction layers pay dividends when silicon changes. By keeping register-level access in one module, we swapped microcontrollers late in the project without rewriting every driver. Pair firmware releases with hardware ECOs and maintain versioned schematics, BOMs, and datasheets so cross-functional teams stay synchronized. The line between hardware and software blurs, and the best teams embrace it.</p>
+<h2>Supply Chain and Lifecycle Management</h2>
+<p>Component shortages can derail timelines. Track alternative part numbers, build relationships with distributors, and maintain a component library that flags end-of-life notices early. During design reviews, verify that footprints match available packages and that thermal requirements align with enclosure constraints. Lifecycle thinking ensures products remain manufacturable years after launch.</p>
+<h2>Collaboration with Manufacturing Partners</h2>
+<p>Invite fabrication and assembly partners into early design discussions. They catch DFM (design for manufacturability) issues like insufficient solder mask clearance or impossible reflow profiles. After first articles, hold joint retrospectives to refine test fixtures, pick-and-place programs, and inspection criteria. These partnerships transform the handoff from engineering to production into a smooth, repeatable process.</p>
+8:[["$","style",null,{"children":"$11"}],["$","div",null,{"style":{"width":"100%","padding":"2.5rem 0 4rem","display":"flex","flexDirection":"column","gap":"1.75rem","color":"#1e3a8a","fontFamily":"-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Helvetica Neue\", sans-serif"},"children":[["$","$L12",null,{"href":"/posts","className":"back-link","children":"← Back to posts"}],["$","article",null,{"style":{"background":"#ffffff","borderRadius":"18px","border":"2px solid #e5e7eb","padding":"2.5rem 3rem","boxShadow":"0 20px 44px rgba(15, 23, 42, 0.12)","display":"flex","flexDirection":"column","gap":"2rem"},"children":[["$","header",null,{"style":{"display":"flex","flexDirection":"column","gap":"1.25rem","paddingBottom":"1.75rem","borderBottom":"1px solid #e2e8f0"},"children":[["$","h1",null,{"style":{"fontSize":"2.35rem","fontWeight":700,"letterSpacing":"-1px","margin":0},"children":"PCB Design and Hardware Abstraction: From Schematic to Manufacturing"}],["$","div",null,{"style":{"display":"flex","flexWrap":"wrap","gap":"1.25rem","fontSize":"0.9rem","color":"#475569"},"children":[["$","span",null,{"children":"July 20, 2015"}],["$","span",null,{"children":["By ","Mevlüt Mert Çİl"]}],["$","span",null,{"children":"Hardware Design"}]]}],["$","ul",null,{"style":{"display":"flex","flexWrap":"wrap","gap":"0.6rem","listStyle":"none","padding":0,"margin":0},"children":[["$","li","pcb",{"style":{"fontSize":"0.75rem","fontWeight":600,"padding":"0.35rem 0.7rem","borderRadius":"999px","background":"#e0f2fe","color":"#1e3a8a"},"children":["#","pcb"]}],["$","li","hardware",{"style":"$8:1:props:children:1:props:children:0:props:children:2:props:children:0:props:style","children":["#","hardware"]}],["$","li","design",{"style":"$8:1:props:children:1:props:children:0:props:children:2:props:children:0:props:style","children":["#","design"]}],["$","li","proteus",{"style":"$8:1:props:children:1:props:children:0:props:children:2:props:children:0:props:style","children":["#","proteus"]}],["$","li","orcad",{"style":"$8:1:props:children:1:props:children:0:props:children:2:props:children:0:props:style","children":["#","orcad"]}]]}]]}],["$","div",null,{"className":"markdown-content","style":{"fontSize":"1rem","lineHeight":1.8,"color":"#334155"},"dangerouslySetInnerHTML":{"__html":"$13"}}],"$L14"]}]]}]]
+14:["$","div",null,{"style":{"marginTop":"1rem","paddingTop":"1.5rem","borderTop":"1px solid #e2e8f0"},"children":["$","$L12",null,{"href":"/posts","className":"back-link","children":"← Back to all posts"}]}]
+d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"IconMark"]
+f:[["$","title","0",{"children":"Mevlüt Mert ÇİL | Full Stack Developer"}],["$","meta","1",{"name":"description","content":"Portfolio of a full-stack developer"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.0b3bf435.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L15","3",{}]]
+b:null

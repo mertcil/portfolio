@@ -9,37 +9,34 @@ const Nav = styled('nav')({
   position: 'sticky',
   top: 0,
   zIndex: 50,
-  background: 'linear-gradient(135deg, rgba(15,23,42,0.92) 0%, rgba(30,64,175,0.88) 100%)',
+  background: '#1e3a8a',
   fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif',
-  padding: '1.05rem 2rem',
-  boxShadow: '0 25px 65px rgba(15, 23, 42, 0.45)',
-  backdropFilter: 'blur(16px)',
+  padding: '0.85rem 1.75rem',
+  boxShadow: '0 10px 30px rgba(30, 58, 138, 0.28)',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
   gap: '1.75rem',
-  borderRadius: '16px',
-  border: '1px solid rgba(148, 163, 184, 0.28)',
   margin: 0,
   boxSizing: 'border-box',
   transition: 'transform 0.25s ease, box-shadow 0.25s ease',
 
   '&:hover': {
-    transform: 'translateY(-2px)',
-    boxShadow: '0 32px 80px rgba(15, 23, 42, 0.5)',
+    transform: 'translateY(-1px)',
+    boxShadow: '0 16px 36px rgba(30, 58, 138, 0.3)',
   },
 })
 
 const BrandLink = styled(Link)({
   fontSize: '1.3rem',
   fontWeight: 700,
-  color: '#e0f2fe',
+  color: '#e2e8f0',
   textDecoration: 'none',
   letterSpacing: '-0.6px',
   transition: 'color 0.25s ease',
 
   '&:hover': {
-    color: '#94a3ff',
+    color: '#bfdbfe',
   },
 })
 
@@ -63,14 +60,12 @@ const NavLinkButton = styled(Link, {
   shouldForwardProp: (prop) => prop !== 'isActive',
 })<{ isActive?: boolean }>(({ isActive }) => ({
   display: 'inline-block',
-  padding: '0.6rem 1.2rem',
+  padding: '0.5rem 1.1rem',
   fontSize: '0.95rem',
   fontWeight: 600,
-  color: isActive ? '#0f172a' : '#e2e8f0',
-  background: isActive
-    ? 'linear-gradient(135deg, #93c5fd 0%, #e0f2fe 100%)'
-    : 'rgba(148, 163, 184, 0.18)',
-  border: isActive ? '1px solid rgba(148, 163, 184, 0.35)' : '1px solid rgba(148, 163, 184, 0.15)',
+  color: isActive ? '#1e3a8a' : '#e2e8f0',
+  background: isActive ? '#bfdbfe' : 'rgba(226, 232, 240, 0.18)',
+  border: isActive ? '1px solid rgba(191, 219, 254, 0.8)' : '1px solid rgba(226, 232, 240, 0.2)',
   borderRadius: '999px',
   textDecoration: 'none',
   transition: 'all 0.3s ease',
@@ -79,10 +74,10 @@ const NavLinkButton = styled(Link, {
   cursor: 'pointer',
 
   '&:hover': {
-    background: 'linear-gradient(135deg, #93c5fd 0%, #e0f2fe 100%)',
-    color: '#0f172a',
+    background: '#bfdbfe',
+    color: '#1e3a8a',
     transform: 'translateY(-1px) scale(1.02)',
-    boxShadow: '0 6px 18px rgba(148, 163, 184, 0.35)',
+    boxShadow: '0 6px 18px rgba(30, 58, 138, 0.2)',
   },
 }))
 
@@ -98,19 +93,19 @@ const IconButton = styled('a')({
   justifyContent: 'center',
   width: '40px',
   height: '40px',
-  borderRadius: '10px',
-  background: 'rgba(148, 163, 184, 0.18)',
-  border: '1px solid rgba(148, 163, 184, 0.25)',
-  color: '#e2e8f0',
+  borderRadius: '12px',
+  background: 'rgba(226, 232, 240, 0.18)',
+  border: '1px solid rgba(191, 219, 254, 0.35)',
+  color: '#bfdbfe',
   textDecoration: 'none',
   transition: 'all 0.3s ease',
   cursor: 'pointer',
 
   '&:hover': {
-    background: 'linear-gradient(135deg, #93c5fd 0%, #e0f2fe 100%)',
-    color: '#0f172a',
+    background: '#bfdbfe',
+    color: '#1e3a8a',
     transform: 'translateY(-1px) scale(1.05)',
-    boxShadow: '0 6px 18px rgba(148, 163, 184, 0.35)',
+    boxShadow: '0 6px 18px rgba(30, 58, 138, 0.22)',
   },
 
   '& svg': {

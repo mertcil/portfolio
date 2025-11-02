@@ -1,0 +1,275 @@
+1:"$Sreact.fragment"
+2:I[30824,["/_next/static/chunks/3d09cd434674fd7a.js","/_next/static/chunks/b8e925703210fbb6.js"],"default"]
+3:I[44781,["/_next/static/chunks/3d09cd434674fd7a.js","/_next/static/chunks/b8e925703210fbb6.js"],"default"]
+4:I[2971,["/_next/static/chunks/3d09cd434674fd7a.js","/_next/static/chunks/b8e925703210fbb6.js"],"default"]
+5:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+6:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+7:I[13642,["/_next/static/chunks/3d09cd434674fd7a.js","/_next/static/chunks/b8e925703210fbb6.js"],"default"]
+9:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+c:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"ViewportBoundary"]
+e:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"MetadataBoundary"]
+10:I[68027,[],"default"]
+:HL["/_next/static/chunks/ea087131c5486ee5.css","style"]
+0:{"P":null,"b":"rMiMceR7FvWc0hLF5gogZ","c":["","posts","2019-01-20-webrtc-real-time-communication"],"q":"","i":false,"f":[[["",{"children":["posts",{"children":[["slug","2019-01-20-webrtc-real-time-communication","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/ea087131c5486ee5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/3d09cd434674fd7a.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/b8e925703210fbb6.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":["$","body",null,{"children":["$","$L2",null,{"children":["$","$L3",null,{"children":[["$","$L4",null,{}],["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L7",null,{}]]}]}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L8",null,["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$Lc",null,{"children":"$@d"}],["$","div",null,{"hidden":true,"children":["$","$Le",null,{"children":["$","$a",null,{"name":"Next.Metadata","children":"$@f"}]}]}],null]}],false]],"m":"$undefined","G":["$10",[]],"s":false,"S":true}
+12:I[22016,["/_next/static/chunks/3d09cd434674fd7a.js","/_next/static/chunks/b8e925703210fbb6.js"],""]
+11:T71a,
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .back-link:hover {
+    color: #1e3a8a;
+  }
+
+  .markdown-content h2 { font-size: 1.8rem; font-weight: 600; color: #1e3a8a; margin-top: 2rem; margin-bottom: 1rem; }
+  .markdown-content h3 { font-size: 1.4rem; font-weight: 600; color: #1e3a8a; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .markdown-content p { margin-bottom: 1rem; line-height: 1.8; }
+  .markdown-content ul, .markdown-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .markdown-content li { margin-bottom: 0.5rem; line-height: 1.8; }
+  .markdown-content code { background: #f1f5f9; padding: 0.2rem 0.45rem; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 0.9em; color: #d63384; }
+  .markdown-content pre { background: #0f172a; color: #e2e8f0; padding: 1.25rem; border-radius: 12px; overflow-x: auto; margin-bottom: 1.75rem; font-family: 'Courier New', monospace; font-size: 0.9rem; line-height: 1.6; }
+  .markdown-content pre code { background: transparent; padding: 0; color: inherit; }
+  .markdown-content blockquote { border-left: 4px solid #2563eb; padding-left: 1rem; margin-left: 0; margin-bottom: 1rem; color: #475569; font-style: italic; }
+  .markdown-content a { color: #2563eb; text-decoration: underline; }
+  .markdown-content a:hover { color: #1e3a8a; }
+  .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.75rem; font-size: 0.9rem; }
+  .markdown-content th, .markdown-content td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+  .markdown-content th { background: #f8fafc; font-weight: 600; }
+  .markdown-content tr:hover { background: #f1f5f9; }
+13:T2336,<h1>WebRTC and Real-Time Communication: Building Diyalog Video Platform</h1>
+<p>Real-time video communication over the web seemed like science fiction not long ago. WebRTC changed everything. Building Diyalog, a WebRTC-based meeting platform, taught me about the complexities of peer-to-peer communication, fallback mechanisms, and real-time performance.</p>
+<p>Latency budgets are unforgiving. Every millisecond across the signaling path, TURN relays, or UI render cycle compounds. We obsessed over instrumentation to catch regressions early and to understand how features impacted both bandwidth usage and CPU load on low-powered devices.</p>
+<h2>WebRTC Architecture</h2>
+<pre><code>Browser A → STUN Server → Determine public IP
+         → TURN Server → Relay if needed
+
+Browser A ← Peer Connection → Browser B
+</code></pre>
+<h2>Setting Up WebRTC Connection</h2>
+<pre><code class="language-javascript">// Initialize peer connection
+const peerConnection = new RTCPeerConnection({
+  iceServers: [
+    { urls: 'stun:stun.l.google.com:19302' },
+    { urls: 'stun:stun1.l.google.com:19302' },
+    {
+      urls: 'turn:your-turn-server.com',
+      username: 'user',
+      credential: 'pass'
+    }
+  ]
+});
+
+// Add local stream
+const stream = await navigator.mediaDevices.getUserMedia({
+  video: { width: 1280, height: 720 },
+  audio: true
+});
+
+stream.getTracks().forEach(track => {
+  peerConnection.addTrack(track, stream);
+});
+
+// Create offer
+const offer = await peerConnection.createOffer();
+await peerConnection.setLocalDescription(offer);
+
+// Send offer to remote peer
+signaling.send('offer', offer);
+</code></pre>
+<h2>React Component for Video Display</h2>
+<pre><code class="language-javascript">import React, { useRef, useEffect } from 'react';
+
+export function VideoStream({ stream, label }) {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current &#x26;&#x26; stream) {
+      videoRef.current.srcObject = stream;
+    }
+  }, [stream]);
+
+  return (
+    &#x3C;div className="video-container">
+      &#x3C;video
+        ref={videoRef}
+        autoPlay
+        playsInline
+        muted={label === 'local'}
+        className="video-stream"
+      />
+      &#x3C;p className="video-label">{label}&#x3C;/p>
+    &#x3C;/div>
+  );
+}
+</code></pre>
+<h2>Signaling Server with Node.js</h2>
+<pre><code class="language-javascript">const express = require('express');
+const http = require('http');
+const socketIO = require('socket.io');
+
+const app = express();
+const server = http.createServer(app);
+const io = socketIO(server, {
+  cors: { origin: "*" }
+});
+
+// Track active connections
+const rooms = new Map();
+
+io.on('connection', (socket) => {
+  socket.on('join-room', ({ roomId, userId }) => {
+    socket.join(roomId);
+    socket.broadcast.to(roomId).emit('user-joined', { userId });
+  });
+
+  socket.on('offer', ({ roomId, offer, targetUserId }) => {
+    io.to(roomId).emit('offer-received', { offer, fromUserId: socket.id });
+  });
+
+  socket.on('answer', ({ roomId, answer, targetUserId }) => {
+    io.to(roomId).emit('answer-received', { answer, fromUserId: socket.id });
+  });
+
+  socket.on('ice-candidate', ({ roomId, candidate }) => {
+    socket.broadcast.to(roomId).emit('ice-candidate-received', candidate);
+  });
+
+  socket.on('disconnect', () => {
+    socket.broadcast.emit('user-left', { userId: socket.id });
+  });
+});
+
+server.listen(3000, () => {
+  console.log('Signaling server running on port 3000');
+});
+</code></pre>
+<h2>Handling Network Degradation</h2>
+<pre><code class="language-typescript">class MediaQualityManager {
+  private constraints = {
+    high: { video: { width: 1280, height: 720 }, audio: true },
+    medium: { video: { width: 640, height: 480 }, audio: true },
+    low: { video: { width: 320, height: 240 }, audio: false }
+  };
+
+  adjustQuality(bandwidthMbps: number) {
+    if (bandwidthMbps > 5) {
+      return this.constraints.high;
+    } else if (bandwidthMbps > 1) {
+      return this.constraints.medium;
+    } else {
+      return this.constraints.low;
+    }
+  }
+}
+</code></pre>
+<h2>Redis for Connection State</h2>
+<pre><code class="language-javascript">const redis = require('redis');
+const client = redis.createClient();
+
+// Store active sessions
+async function createSession(roomId, userId) {
+  const session = {
+    userId,
+    roomId,
+    joinedAt: new Date(),
+    isActive: true
+  };
+
+  await client.hSet(`room:${roomId}`, userId, JSON.stringify(session));
+  await client.expire(`room:${roomId}`, 3600); // 1 hour expiry
+}
+
+async function getActiveParticipants(roomId) {
+  const participants = await client.hGetAll(`room:${roomId}`);
+  return Object.values(participants).map(p => JSON.parse(p));
+}
+</code></pre>
+<h2>Performance Monitoring</h2>
+<pre><code class="language-typescript">class ConnectionMonitor {
+  async monitorConnection(peerConnection: RTCPeerConnection) {
+    setInterval(async () => {
+      const stats = await peerConnection.getStats();
+
+      stats.forEach(report => {
+        if (report.type === 'inbound-rtp') {
+          console.log('Incoming bitrate:', report.bytesReceived);
+          console.log('Packets lost:', report.packetsLost);
+        }
+
+        if (report.type === 'outbound-rtp') {
+          console.log('Outgoing bitrate:', report.bytesSent);
+          console.log('Frame rate:', report.framesPerSecond);
+        }
+
+        if (report.type === 'candidate-pair') {
+          if (report.state === 'succeeded') {
+            console.log('Latency:', report.currentRoundTripTime * 1000, 'ms');
+          }
+        }
+      });
+    }, 1000);
+  }
+}
+</code></pre>
+<h2>Handling Connection Failures</h2>
+<pre><code class="language-typescript">class ResilientPeerConnection {
+  private retryAttempts = 0;
+  private maxRetries = 3;
+
+  async establishConnection(remoteOffer: RTCSessionDescriptionInit) {
+    try {
+      await this.peerConnection.setRemoteDescription(
+        new RTCSessionDescription(remoteOffer)
+      );
+
+      const answer = await this.peerConnection.createAnswer();
+      await this.peerConnection.setLocalDescription(answer);
+
+      this.retryAttempts = 0; // Reset on success
+      return answer;
+    } catch (error) {
+      if (this.retryAttempts &#x3C; this.maxRetries) {
+        this.retryAttempts++;
+        console.log(`Retrying... (${this.retryAttempts}/${this.maxRetries})`);
+
+        // Exponential backoff
+        await new Promise(r => setTimeout(r, Math.pow(2, this.retryAttempts) * 100));
+        return this.establishConnection(remoteOffer);
+      }
+
+      throw error;
+    }
+  }
+}
+</code></pre>
+<h2>Key Learnings from Building Diyalog</h2>
+<ol>
+<li><strong>Network is unreliable</strong> - Always have fallbacks</li>
+<li><strong>Real-time communication is CPU-intensive</strong> - Optimize carefully</li>
+<li><strong>Signaling matters</strong> - Choose reliable signaling protocols</li>
+<li><strong>TURN servers are expensive</strong> - But necessary for NAT traversal</li>
+<li><strong>Monitoring is critical</strong> - You can't fix what you can't see</li>
+<li><strong>Users tolerate latency, not disconnections</strong> - Reliability > perfection</li>
+</ol>
+<p>Building Diyalog was one of the most technically challenging projects I've worked on. Real-time communication exposes every weakness in your system—network, CPU, memory, and algorithm efficiency all matter.</p>
+<h2>Scaling Operations and Support</h2>
+<p>As adoption grew, we needed predictable scaling. Autoscaling groups right-sized media servers based on concurrent participants, synthetic clients ran 24/7 to exercise signaling paths, and feature flags let us roll out codec tweaks safely. Support playbooks included steps for gathering browser logs, ICE candidates, and HAR files so we could reproduce tricky issues quickly.</p>
+<h2>Privacy, Compliance, and User Experience</h2>
+<p>Handling live audio and video demands rigorous privacy controls. We encrypted recordings at rest, enforced least privilege access, and implemented consent prompts for screen sharing. UX mattered as much as engineering—clear connection indicators, graceful degradation to audio-only mode, and post-call feedback forms turned raw RTC plumbing into a trustworthy product experience.</p>
+<h2>Analytics and Product Insights</h2>
+<p>To keep improving call quality, we tracked join success rate, average bitrate, network degradation incidents, and customer satisfaction scores. Dashboards correlated technical metrics with user sentiment, enabling targeted improvements. For example, we noticed higher drop rates on mobile networks, prompting optimizations to adaptive bitrate logic and UI hints that suggested switching to Wi-Fi.</p>
+<h2>Future Directions</h2>
+<p>WebRTC continues to evolve with standardized data channels, end-to-end encryption for multiparty calls, and WebTransport integrations. Staying engaged with community forums and W3C updates ensures your platform keeps pace. Experiment with AI-driven noise suppression or background effects cautiously—evaluate CPU impact and gather user feedback before rolling out widely.</p>
+8:[["$","style",null,{"children":"$11"}],["$","div",null,{"style":{"width":"100%","padding":"2.5rem 0 4rem","display":"flex","flexDirection":"column","gap":"1.75rem","color":"#1e3a8a","fontFamily":"-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Helvetica Neue\", sans-serif"},"children":[["$","$L12",null,{"href":"/posts","className":"back-link","children":"← Back to posts"}],["$","article",null,{"style":{"background":"#ffffff","borderRadius":"18px","border":"2px solid #e5e7eb","padding":"2.5rem 3rem","boxShadow":"0 20px 44px rgba(15, 23, 42, 0.12)","display":"flex","flexDirection":"column","gap":"2rem"},"children":[["$","header",null,{"style":{"display":"flex","flexDirection":"column","gap":"1.25rem","paddingBottom":"1.75rem","borderBottom":"1px solid #e2e8f0"},"children":[["$","h1",null,{"style":{"fontSize":"2.35rem","fontWeight":700,"letterSpacing":"-1px","margin":0},"children":"WebRTC and Real-Time Communication: Building Diyalog Video Platform"}],["$","div",null,{"style":{"display":"flex","flexWrap":"wrap","gap":"1.25rem","fontSize":"0.9rem","color":"#475569"},"children":[["$","span",null,{"children":"January 20, 2019"}],["$","span",null,{"children":["By ","Mevlüt Mert Çİl"]}],["$","span",null,{"children":"Real-Time Systems"}]]}],["$","ul",null,{"style":{"display":"flex","flexWrap":"wrap","gap":"0.6rem","listStyle":"none","padding":0,"margin":0},"children":[["$","li","webrtc",{"style":{"fontSize":"0.75rem","fontWeight":600,"padding":"0.35rem 0.7rem","borderRadius":"999px","background":"#e0f2fe","color":"#1e3a8a"},"children":["#","webrtc"]}],["$","li","react",{"style":"$8:1:props:children:1:props:children:0:props:children:2:props:children:0:props:style","children":["#","react"]}],["$","li","node.js",{"style":"$8:1:props:children:1:props:children:0:props:children:2:props:children:0:props:style","children":["#","node.js"]}],["$","li","real-time",{"style":"$8:1:props:children:1:props:children:0:props:children:2:props:children:0:props:style","children":["#","real-time"]}],["$","li","video",{"style":"$8:1:props:children:1:props:children:0:props:children:2:props:children:0:props:style","children":["#","video"]}]]}]]}],["$","div",null,{"className":"markdown-content","style":{"fontSize":"1rem","lineHeight":1.8,"color":"#334155"},"dangerouslySetInnerHTML":{"__html":"$13"}}],"$L14"]}]]}]]
+14:["$","div",null,{"style":{"marginTop":"1rem","paddingTop":"1.5rem","borderTop":"1px solid #e2e8f0"},"children":["$","$L12",null,{"href":"/posts","className":"back-link","children":"← Back to all posts"}]}]
+d:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"IconMark"]
+f:[["$","title","0",{"children":"Mevlüt Mert ÇİL | Full Stack Developer"}],["$","meta","1",{"name":"description","content":"Portfolio of a full-stack developer"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.0b3bf435.ico","sizes":"256x256","type":"image/x-icon"}],["$","$L15","3",{}]]
+b:null

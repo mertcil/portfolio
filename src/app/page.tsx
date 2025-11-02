@@ -1,9 +1,6 @@
 'use client'
 
-import { MedievalSharp } from 'next/font/google'
 import { styled } from '@mui/material/styles'
-
-const display = MedievalSharp({ weight: '400', subsets: ['latin'] })
 
 const Wrapper = styled('div')({
   maxWidth: '48rem', // max-w-3xl
@@ -42,7 +39,7 @@ export default function Home() {
   return (
     <Wrapper>
       <Section>
-        <Title style={{ ...display.style }}>
+        <Title>
           Hi, I'm <span>Mevlüt Mert ÇİL</span>
         </Title>
         <Subtitle>
