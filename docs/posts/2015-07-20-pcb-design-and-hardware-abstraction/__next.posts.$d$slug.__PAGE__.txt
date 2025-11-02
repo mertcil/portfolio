@@ -1,0 +1,100 @@
+1:"$Sreact.fragment"
+3:I[22016,["/_next/static/chunks/3d09cd434674fd7a.js","/_next/static/chunks/b8e925703210fbb6.js"],""]
+9:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+2:T71a,
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .back-link:hover {
+    color: #1e3a8a;
+  }
+
+  .markdown-content h2 { font-size: 1.8rem; font-weight: 600; color: #1e3a8a; margin-top: 2rem; margin-bottom: 1rem; }
+  .markdown-content h3 { font-size: 1.4rem; font-weight: 600; color: #1e3a8a; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .markdown-content p { margin-bottom: 1rem; line-height: 1.8; }
+  .markdown-content ul, .markdown-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .markdown-content li { margin-bottom: 0.5rem; line-height: 1.8; }
+  .markdown-content code { background: #f1f5f9; padding: 0.2rem 0.45rem; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 0.9em; color: #d63384; }
+  .markdown-content pre { background: #0f172a; color: #e2e8f0; padding: 1.25rem; border-radius: 12px; overflow-x: auto; margin-bottom: 1.75rem; font-family: 'Courier New', monospace; font-size: 0.9rem; line-height: 1.6; }
+  .markdown-content pre code { background: transparent; padding: 0; color: inherit; }
+  .markdown-content blockquote { border-left: 4px solid #2563eb; padding-left: 1rem; margin-left: 0; margin-bottom: 1rem; color: #475569; font-style: italic; }
+  .markdown-content a { color: #2563eb; text-decoration: underline; }
+  .markdown-content a:hover { color: #1e3a8a; }
+  .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.75rem; font-size: 0.9rem; }
+  .markdown-content th, .markdown-content td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+  .markdown-content th { background: #f8fafc; font-weight: 600; }
+  .markdown-content tr:hover { background: #f1f5f9; }
+0:{"buildId":"rMiMceR7FvWc0hLF5gogZ","rsc":["$","$1","c",{"children":[[["$","style",null,{"children":"$2"}],["$","div",null,{"style":{"width":"100%","padding":"2.5rem 0 4rem","display":"flex","flexDirection":"column","gap":"1.75rem","color":"#1e3a8a","fontFamily":"-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Helvetica Neue\", sans-serif"},"children":[["$","$L3",null,{"href":"/posts","className":"back-link","children":"← Back to posts"}],["$","article",null,{"style":{"background":"#ffffff","borderRadius":"18px","border":"2px solid #e5e7eb","padding":"2.5rem 3rem","boxShadow":"0 20px 44px rgba(15, 23, 42, 0.12)","display":"flex","flexDirection":"column","gap":"2rem"},"children":[["$","header",null,{"style":{"display":"flex","flexDirection":"column","gap":"1.25rem","paddingBottom":"1.75rem","borderBottom":"1px solid #e2e8f0"},"children":[["$","h1",null,{"style":{"fontSize":"2.35rem","fontWeight":700,"letterSpacing":"-1px","margin":0},"children":"PCB Design and Hardware Abstraction: From Schematic to Manufacturing"}],["$","div",null,{"style":{"display":"flex","flexWrap":"wrap","gap":"1.25rem","fontSize":"0.9rem","color":"#475569"},"children":[["$","span",null,{"children":"July 20, 2015"}],["$","span",null,{"children":["By ","Mevlüt Mert Çİl"]}],["$","span",null,{"children":"Hardware Design"}]]}],["$","ul",null,{"style":{"display":"flex","flexWrap":"wrap","gap":"0.6rem","listStyle":"none","padding":0,"margin":0},"children":[["$","li","pcb",{"style":{"fontSize":"0.75rem","fontWeight":600,"padding":"0.35rem 0.7rem","borderRadius":"999px","background":"#e0f2fe","color":"#1e3a8a"},"children":["#","pcb"]}],["$","li","hardware",{"style":{"fontSize":"0.75rem","fontWeight":600,"padding":"0.35rem 0.7rem","borderRadius":"999px","background":"#e0f2fe","color":"#1e3a8a"},"children":["#","hardware"]}],["$","li","design",{"style":{"fontSize":"0.75rem","fontWeight":600,"padding":"0.35rem 0.7rem","borderRadius":"999px","background":"#e0f2fe","color":"#1e3a8a"},"children":["#","design"]}],["$","li","proteus",{"style":{"fontSize":"0.75rem","fontWeight":600,"padding":"0.35rem 0.7rem","borderRadius":"999px","background":"#e0f2fe","color":"#1e3a8a"},"children":["#","proteus"]}],"$L4"]}]]}],"$L5","$L6"]}]]}]],null,"$L7"]}],"loading":null,"isPartial":false}
+4:["$","li","orcad",{"style":{"fontSize":"0.75rem","fontWeight":600,"padding":"0.35rem 0.7rem","borderRadius":"999px","background":"#e0f2fe","color":"#1e3a8a"},"children":["#","orcad"]}]
+8:T1227,<h1>PCB Design and Hardware Abstraction: From Schematic to Manufacturing</h1>
+<p>Hardware design bridges the gap between physics and software. After working on multiple PCB projects during my internships, I've learned that great hardware design requires the same attention to abstraction as great software design.</p>
+<p>Constraints stack up quickly: component lead times, thermal budgets, and EMC requirements compete with cost targets. Successful designs balance these factors while still leaving room for firmware teams to iterate.</p>
+<h2>From Schematic to PCB</h2>
+<p>The traditional PCB design flow is:</p>
+<ol>
+<li><strong>Schematic Design</strong> - Circuit theory comes alive</li>
+<li><strong>Component Selection</strong> - Balancing cost, availability, performance</li>
+<li><strong>Layout</strong> - The art of routing without signal integrity issues</li>
+<li><strong>Manufacturing</strong> - Dealing with real-world tolerances</li>
+</ol>
+<h2>Tools of the Trade</h2>
+<ul>
+<li><strong>ARES</strong> (PCB Layout) - Handling trace routing and layer management</li>
+<li><strong>Orcad</strong> (PSpice) - Simulation before manufacturing</li>
+<li><strong>Proteus</strong> - Integration of schematic and simulation</li>
+<li><strong>Cadence</strong> - Professional-grade design for complex projects</li>
+</ul>
+<h2>The Voltage Source Circuit Project</h2>
+<p>One of my early projects was designing a DC voltage source with adjustable output (-5V, +5V, and everything in between).</p>
+<pre><code>Components:
+- AC Input → Transformer → Rectifier Bridge
+- Smoothing Capacitor (filtering)
+- 555 Timer IC (oscillator/function generator)
+- Potentiometer (variable output)
+- Voltage Regulator (stabilization)
+</code></pre>
+<h2>Signal Integrity Challenges</h2>
+<p>When designing PCBs, you quickly learn that traces aren't just wires:</p>
+<pre><code>- Track width affects impedance
+- Via placement impacts signal quality
+- Ground planes reduce noise
+- Layer stackup determines signal propagation
+</code></pre>
+<h2>Hardware Abstraction in Firmware</h2>
+<p>Good firmware abstracts hardware complexity:</p>
+<pre><code class="language-c">// Hardware-specific code isolated
+hal_gpio_set_pin(GPIO_PORT_A, PIN_5, HIGH);
+hal_spi_send_byte(0xAA);
+
+// Application code remains hardware-agnostic
+sensor_read_value();
+actuator_move_to_position(target);
+</code></pre>
+<h2>Lessons Learned</h2>
+<ul>
+<li><strong>Design for manufacturability</strong> - Tight tolerances cost exponentially more</li>
+<li><strong>Simulate before building</strong> - PSpice and VHDL simulators are invaluable</li>
+<li><strong>Test early</strong> - Prototype with breadboards and oscilloscopes</li>
+<li><strong>Documentation matters</strong> - Future you will thank present you</li>
+</ul>
+<p>The intersection of hardware and software is where true embedded systems engineering happens.</p>
+<h2>Design for Manufacturability and Testing</h2>
+<p>Collaborate with fabrication partners early to understand panelization, drill tolerances, and recommended copper weights. Add test pads, fiducials, and headers that make bring-up faster. Boundary-scan (JTAG) and in-circuit test fixtures can save weeks of debugging by catching solder bridges or component swaps before boards reach engineers.</p>
+<h2>Firmware Collaboration and Iteration</h2>
+<p>Hardware abstraction layers pay dividends when silicon changes. By keeping register-level access in one module, we swapped microcontrollers late in the project without rewriting every driver. Pair firmware releases with hardware ECOs and maintain versioned schematics, BOMs, and datasheets so cross-functional teams stay synchronized. The line between hardware and software blurs, and the best teams embrace it.</p>
+<h2>Supply Chain and Lifecycle Management</h2>
+<p>Component shortages can derail timelines. Track alternative part numbers, build relationships with distributors, and maintain a component library that flags end-of-life notices early. During design reviews, verify that footprints match available packages and that thermal requirements align with enclosure constraints. Lifecycle thinking ensures products remain manufacturable years after launch.</p>
+<h2>Collaboration with Manufacturing Partners</h2>
+<p>Invite fabrication and assembly partners into early design discussions. They catch DFM (design for manufacturability) issues like insufficient solder mask clearance or impossible reflow profiles. After first articles, hold joint retrospectives to refine test fixtures, pick-and-place programs, and inspection criteria. These partnerships transform the handoff from engineering to production into a smooth, repeatable process.</p>
+5:["$","div",null,{"className":"markdown-content","style":{"fontSize":"1rem","lineHeight":1.8,"color":"#334155"},"dangerouslySetInnerHTML":{"__html":"$8"}}]
+6:["$","div",null,{"style":{"marginTop":"1rem","paddingTop":"1.5rem","borderTop":"1px solid #e2e8f0"},"children":["$","$L3",null,{"href":"/posts","className":"back-link","children":"← Back to all posts"}]}]
+7:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+b:null

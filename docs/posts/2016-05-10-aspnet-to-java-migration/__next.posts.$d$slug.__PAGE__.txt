@@ -1,0 +1,175 @@
+1:"$Sreact.fragment"
+3:I[22016,["/_next/static/chunks/3d09cd434674fd7a.js","/_next/static/chunks/b8e925703210fbb6.js"],""]
+9:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+a:"$Sreact.suspense"
+2:T71a,
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .back-link:hover {
+    color: #1e3a8a;
+  }
+
+  .markdown-content h2 { font-size: 1.8rem; font-weight: 600; color: #1e3a8a; margin-top: 2rem; margin-bottom: 1rem; }
+  .markdown-content h3 { font-size: 1.4rem; font-weight: 600; color: #1e3a8a; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .markdown-content p { margin-bottom: 1rem; line-height: 1.8; }
+  .markdown-content ul, .markdown-content ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+  .markdown-content li { margin-bottom: 0.5rem; line-height: 1.8; }
+  .markdown-content code { background: #f1f5f9; padding: 0.2rem 0.45rem; border-radius: 4px; font-family: 'Courier New', monospace; font-size: 0.9em; color: #d63384; }
+  .markdown-content pre { background: #0f172a; color: #e2e8f0; padding: 1.25rem; border-radius: 12px; overflow-x: auto; margin-bottom: 1.75rem; font-family: 'Courier New', monospace; font-size: 0.9rem; line-height: 1.6; }
+  .markdown-content pre code { background: transparent; padding: 0; color: inherit; }
+  .markdown-content blockquote { border-left: 4px solid #2563eb; padding-left: 1rem; margin-left: 0; margin-bottom: 1rem; color: #475569; font-style: italic; }
+  .markdown-content a { color: #2563eb; text-decoration: underline; }
+  .markdown-content a:hover { color: #1e3a8a; }
+  .markdown-content table { width: 100%; border-collapse: collapse; margin-bottom: 1.75rem; font-size: 0.9rem; }
+  .markdown-content th, .markdown-content td { padding: 0.75rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
+  .markdown-content th { background: #f8fafc; font-weight: 600; }
+  .markdown-content tr:hover { background: #f1f5f9; }
+0:{"buildId":"rMiMceR7FvWc0hLF5gogZ","rsc":["$","$1","c",{"children":[[["$","style",null,{"children":"$2"}],["$","div",null,{"style":{"width":"100%","padding":"2.5rem 0 4rem","display":"flex","flexDirection":"column","gap":"1.75rem","color":"#1e3a8a","fontFamily":"-apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Helvetica Neue\", sans-serif"},"children":[["$","$L3",null,{"href":"/posts","className":"back-link","children":"← Back to posts"}],["$","article",null,{"style":{"background":"#ffffff","borderRadius":"18px","border":"2px solid #e5e7eb","padding":"2.5rem 3rem","boxShadow":"0 20px 44px rgba(15, 23, 42, 0.12)","display":"flex","flexDirection":"column","gap":"2rem"},"children":[["$","header",null,{"style":{"display":"flex","flexDirection":"column","gap":"1.25rem","paddingBottom":"1.75rem","borderBottom":"1px solid #e2e8f0"},"children":[["$","h1",null,{"style":{"fontSize":"2.35rem","fontWeight":700,"letterSpacing":"-1px","margin":0},"children":"ASP.NET to Java Migration: Lessons from Modernizing Legacy Systems"}],["$","div",null,{"style":{"display":"flex","flexWrap":"wrap","gap":"1.25rem","fontSize":"0.9rem","color":"#475569"},"children":[["$","span",null,{"children":"May 10, 2016"}],["$","span",null,{"children":["By ","Mevlüt Mert Çİl"]}],["$","span",null,{"children":"System Modernization"}]]}],["$","ul",null,{"style":{"display":"flex","flexWrap":"wrap","gap":"0.6rem","listStyle":"none","padding":0,"margin":0},"children":[["$","li","migration",{"style":{"fontSize":"0.75rem","fontWeight":600,"padding":"0.35rem 0.7rem","borderRadius":"999px","background":"#e0f2fe","color":"#1e3a8a"},"children":["#","migration"]}],["$","li","aspnet",{"style":{"fontSize":"0.75rem","fontWeight":600,"padding":"0.35rem 0.7rem","borderRadius":"999px","background":"#e0f2fe","color":"#1e3a8a"},"children":["#","aspnet"]}],["$","li","java",{"style":{"fontSize":"0.75rem","fontWeight":600,"padding":"0.35rem 0.7rem","borderRadius":"999px","background":"#e0f2fe","color":"#1e3a8a"},"children":["#","java"]}],["$","li","legacy",{"style":{"fontSize":"0.75rem","fontWeight":600,"padding":"0.35rem 0.7rem","borderRadius":"999px","background":"#e0f2fe","color":"#1e3a8a"},"children":["#","legacy"]}],"$L4"]}]]}],"$L5","$L6"]}]]}]],null,"$L7"]}],"loading":null,"isPartial":false}
+4:["$","li","refactoring",{"style":{"fontSize":"0.75rem","fontWeight":600,"padding":"0.35rem 0.7rem","borderRadius":"999px","background":"#e0f2fe","color":"#1e3a8a"},"children":["#","refactoring"]}]
+8:T1ae6,<h1>ASP.NET to Java Migration: Lessons from Modernizing Legacy Systems</h1>
+<p>Legacy systems are a blessing and a curse. They power critical business operations but often become technical debt nightmares. My experience migrating a car fleet management system from ASP.NET WebForms to Java Spring MVC taught me invaluable lessons about modernization.</p>
+<p>We treated modernization as both a technical and organizational initiative. Stakeholders needed clear milestones, rollback plans, and transparent communication about user impacts.</p>
+<h2>The Challenge: ASP.NET WebForms</h2>
+<p>WebForms were innovative when created, but they hide complexity behind an abstraction layer that becomes problematic at scale:</p>
+<pre><code class="language-csharp">// ASP.NET WebForms - stateful, server-heavy
+&#x3C;asp:GridView ID="FleetGrid" runat="server" OnRowCommand="Grid_RowCommand">
+    &#x3C;asp:BoundField DataField="VehicleID" />
+    &#x3C;asp:ButtonField ButtonType="Link" CommandName="Select" />
+&#x3C;/asp:GridView>
+
+// ViewState - hidden complexity
+protected override void OnInit(EventArgs e) {
+    // Potentially massive ViewState on the client
+    base.OnInit(e);
+}
+</code></pre>
+<h2>Why Java Spring MVC?</h2>
+<p>The decision to move to Spring MVC was based on several factors:</p>
+<ol>
+<li><strong>Explicit over implicit</strong> - MVC pattern is clearer</li>
+<li><strong>Scalability</strong> - Spring handles load better</li>
+<li><strong>Community</strong> - Massive Spring ecosystem</li>
+<li><strong>Long-term viability</strong> - Java isn't going anywhere</li>
+<li><strong>Cost</strong> - Open source vs licensing</li>
+</ol>
+<h2>The Migration Process</h2>
+<h3>Phase 1: Database Mapping</h3>
+<pre><code class="language-java">@Entity
+@Table(name = "vehicles")
+public class Vehicle {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long vehicleId;
+
+    @Column(name = "vehicle_name")
+    private String name;
+
+    @Column(name = "fleet_status")
+    private String status;
+}
+</code></pre>
+<h3>Phase 2: Data Access Layer</h3>
+<p>Moving from ADO.NET to Hibernate ORM:</p>
+<pre><code class="language-java">// Hibernate repository
+@Repository
+public class VehicleRepository extends JpaRepository&#x3C;Vehicle, Long> {
+    List&#x3C;Vehicle> findByFleetStatus(String status);
+
+    @Query("SELECT v FROM Vehicle v WHERE v.registrationDate > :date")
+    List&#x3C;Vehicle> findRecentVehicles(@Param("date") LocalDate date);
+}
+</code></pre>
+<h3>Phase 3: Business Logic</h3>
+<pre><code class="language-java">@Service
+public class FleetManagementService {
+    @Autowired
+    private VehicleRepository vehicleRepository;
+
+    public List&#x3C;Vehicle> getActiveFleet() {
+        return vehicleRepository.findByFleetStatus("ACTIVE");
+    }
+
+    public void updateVehicleStatus(Long vehicleId, String status) {
+        Vehicle vehicle = vehicleRepository.findById(vehicleId).orElseThrow();
+        vehicle.setStatus(status);
+        vehicleRepository.save(vehicle);
+    }
+}
+</code></pre>
+<h3>Phase 4: Web Layer</h3>
+<pre><code class="language-java">@Controller
+@RequestMapping("/fleet")
+public class FleetController {
+    @Autowired
+    private FleetManagementService service;
+
+    @GetMapping("/vehicles")
+    public String listVehicles(Model model) {
+        model.addAttribute("vehicles", service.getActiveFleet());
+        return "fleet/vehicles-list";
+    }
+
+    @PostMapping("/update/{id}")
+    public String updateVehicle(@PathVariable Long id,
+                               @RequestParam String status) {
+        service.updateVehicleStatus(id, status);
+        return "redirect:/fleet/vehicles";
+    }
+}
+</code></pre>
+<h2>Key Challenges Encountered</h2>
+<ol>
+<li><strong>Stored Procedures</strong> - Had to rewrite complex SQL logic</li>
+<li><strong>Performance</strong> - N+1 query problems with ORM</li>
+<li><strong>Testing</strong> - Legacy code wasn't built for tests</li>
+<li><strong>Team Training</strong> - Java is different from C#</li>
+<li><strong>Concurrent Development</strong> - Migration while maintaining system</li>
+</ol>
+<h2>Performance Optimization</h2>
+<p>After migration, we had to optimize:</p>
+<pre><code class="language-java">// Problem: N+1 queries
+List&#x3C;Vehicle> vehicles = vehicleRepository.findAll();
+for (Vehicle v : vehicles) {
+    System.out.println(v.getOwner().getName());  // Query per iteration
+}
+
+// Solution: Eager loading
+@EntityGraph(attributePaths = {"owner"})
+List&#x3C;Vehicle> findAllWithOwner();
+</code></pre>
+<h2>Lessons Learned</h2>
+<ol>
+<li><strong>Plan incremental migration</strong> - Don't do big-bang rewrites</li>
+<li><strong>Performance testing is critical</strong> - Modern stacks aren't always faster</li>
+<li><strong>Team training matters</strong> - Technology is people</li>
+<li><strong>Database often is the bottleneck</strong> - Optimize there first</li>
+<li><strong>Keep the old system running</strong> - Risk mitigation is important</li>
+</ol>
+<p>The migration took 6 months of intense development but resulted in a system that's maintainable, scalable, and ready for the next 10 years of growth.</p>
+<h2>Conclusion</h2>
+<p>Modernization isn't just about using new technology. It's about:</p>
+<ul>
+<li>Improving maintainability</li>
+<li>Preparing for future growth</li>
+<li>Enabling your team to work effectively</li>
+<li>Reducing long-term costs</li>
+</ul>
+<p>The pain of migration is worth it when you're maintaining code for a decade.</p>
+<h2>Change Management and Parallel Runs</h2>
+<p>We ran the new Java stack in parallel with the ASP.NET system for two release cycles. Feature flags routed a small percentage of users to the modernized UI, and daily comparisons of invoices, fleet reports, and usage metrics verified parity. This approach surfaced discrepancies early while giving the support team confidence that the new system matched business expectations.</p>
+<h2>Testing, Tooling, and Team Enablement</h2>
+<p>Automated tests covered migration scripts, service logic, and REST controllers. Load tests ensured the new stack matched or exceeded previous throughput, while APM tools like New Relic monitored both environments side by side. We invested in training—pair programming sessions, knowledge-sharing brown bags, and documentation that mapped WebForms concepts to Spring equivalents. Modernization succeeds when the team feels empowered, not overwhelmed.</p>
+<h2>Long-Term Evolution</h2>
+<p>Modernization doesn’t end at launch. After stabilizing the new platform, we incrementally refactored modules into Spring Boot microservices, introduced event streams for real-time reporting, and built CI/CD pipelines that deployed multiple times per week. Retrospectives captured lessons learned—what processes worked, where tooling faltered, and how to improve future migrations. By treating the migration as a continuous journey, we avoided slipping back into legacy habits.</p>
+5:["$","div",null,{"className":"markdown-content","style":{"fontSize":"1rem","lineHeight":1.8,"color":"#334155"},"dangerouslySetInnerHTML":{"__html":"$8"}}]
+6:["$","div",null,{"style":{"marginTop":"1rem","paddingTop":"1.5rem","borderTop":"1px solid #e2e8f0"},"children":["$","$L3",null,{"href":"/posts","className":"back-link","children":"← Back to all posts"}]}]
+7:["$","$L9",null,{"children":["$","$a",null,{"name":"Next.MetadataOutlet","children":"$@b"}]}]
+b:null
