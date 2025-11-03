@@ -5,35 +5,37 @@ import EmailIcon from '@mui/icons-material/Email'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import GitHubIcon from '@mui/icons-material/GitHub'
 
-const PageContainer = styled('div')({
+const PageContainer = styled('div')(({ theme }) => ({
   width: '100%',
   display: 'flex',
   gap: '2rem',
   minHeight: '70vh',
-  color: '#1e3a8a',
-  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif',
+  color: theme.palette.text.primary,
+  fontFamily: theme.typography.fontFamily,
 
   '@media (max-width: 960px)': {
     flexDirection: 'column',
     gap: '1.5rem',
   },
-})
+}))
 
-const LeftColumn = styled('aside')({
+const LeftColumn = styled('aside')(({ theme }) => ({
   width: '35%',
-  background: '#f8fafc',
+  background: theme.palette.background.default,
   borderRadius: '18px',
-  border: '2px solid #e5e7eb',
+  border: `2px solid ${theme.palette.divider}`,
   padding: '2.25rem 1.75rem',
   display: 'flex',
   flexDirection: 'column',
   gap: '1.5rem',
-  boxShadow: '0 18px 40px rgba(30, 58, 138, 0.12)',
+  boxShadow: theme.palette.mode === 'dark'
+    ? '0 18px 40px rgba(0, 0, 0, 0.3)'
+    : '0 18px 40px rgba(30, 58, 138, 0.12)',
 
   '@media (max-width: 960px)': {
     width: '100%',
   },
-})
+}))
 
 const AsideHeader = styled('div')({
   display: 'flex',
@@ -48,41 +50,45 @@ const AsideTitle = styled('h2')({
   margin: 0,
 })
 
-const AsideSubtitle = styled('p')({
+const AsideSubtitle = styled('p')(({ theme }) => ({
   fontSize: '0.95rem',
-  color: '#475569',
+  color: theme.palette.text.secondary,
   margin: 0,
   lineHeight: 1.6,
-})
+}))
 
-const SectionCard = styled('div')({
-  background: '#ffffff',
+const SectionCard = styled('div')(({ theme }) => ({
+  background: theme.palette.background.paper,
   borderRadius: '14px',
-  border: '2px solid #e5e7eb',
+  border: `2px solid ${theme.palette.divider}`,
   padding: '1.75rem',
   display: 'flex',
   flexDirection: 'column',
   gap: '1.25rem',
   transition: 'all 0.3s ease',
-  boxShadow: '0 12px 28px rgba(30, 58, 138, 0.08)',
+  boxShadow: theme.palette.mode === 'dark'
+    ? '0 12px 28px rgba(0, 0, 0, 0.2)'
+    : '0 12px 28px rgba(30, 58, 138, 0.08)',
 
   '&:hover': {
-    borderColor: '#1e3a8a',
+    borderColor: theme.palette.primary.dark,
     transform: 'translateY(-3px)',
-    boxShadow: '0 16px 32px rgba(30, 58, 138, 0.16)',
+    boxShadow: theme.palette.mode === 'dark'
+      ? '0 16px 32px rgba(0, 0, 0, 0.3)'
+      : '0 16px 32px rgba(30, 58, 138, 0.16)',
   },
-})
+}))
 
-const SectionTitle = styled('h3')({
+const SectionTitle = styled('h3')(({ theme }) => ({
   fontSize: '0.95rem',
   fontWeight: 700,
   letterSpacing: '0.08em',
   textTransform: 'uppercase',
-  color: '#1e3a8a',
+  color: theme.palette.primary.dark,
   margin: 0,
-  borderBottom: '2px solid #1e3a8a',
+  borderBottom: `2px solid ${theme.palette.primary.dark}`,
   paddingBottom: '0.5rem',
-})
+}))
 
 const ContactList = styled('div')({
   display: 'flex',
@@ -90,25 +96,27 @@ const ContactList = styled('div')({
   gap: '1rem',
 })
 
-const ContactLink = styled('a')({
+const ContactLink = styled('a')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   gap: '1rem',
   padding: '1rem',
   borderRadius: '12px',
-  border: '1px solid #e5e7eb',
-  background: '#f8fafc',
+  border: `1px solid ${theme.palette.divider}`,
+  background: theme.palette.background.default,
   textDecoration: 'none',
   transition: 'all 0.3s ease',
 
   '&:hover': {
-    background: '#1e3a8a',
-    borderColor: '#1e3a8a',
+    background: theme.palette.primary.dark,
+    borderColor: theme.palette.primary.dark,
     transform: 'translateY(-4px)',
-    boxShadow: '0 14px 32px rgba(30, 58, 138, 0.25)',
+    boxShadow: theme.palette.mode === 'dark'
+      ? '0 14px 32px rgba(0, 0, 0, 0.4)'
+      : '0 14px 32px rgba(30, 58, 138, 0.25)',
 
     '& .icon': {
-      color: '#ffffff',
+      color: theme.palette.background.paper,
     },
 
     '& .label': {
@@ -116,22 +124,22 @@ const ContactLink = styled('a')({
     },
 
     '& .value': {
-      color: '#ffffff',
+      color: theme.palette.background.paper,
     },
   },
-})
+}))
 
-const IconWrapper = styled('div')({
+const IconWrapper = styled('div')(({ theme }) => ({
   width: '48px',
   height: '48px',
   borderRadius: '12px',
-  background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)',
+  background: `linear-gradient(135deg, ${theme.palette.primary.dark} 0%, ${theme.palette.primary.main} 100%)`,
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   flexShrink: 0,
   transition: 'all 0.3s ease',
-})
+}))
 
 const ContactContent = styled('div')({
   display: 'flex',
@@ -139,22 +147,22 @@ const ContactContent = styled('div')({
   gap: '0.25rem',
 })
 
-const ContactLabel = styled('span')({
+const ContactLabel = styled('span')(({ theme }) => ({
   fontSize: '0.8rem',
   fontWeight: 600,
   textTransform: 'uppercase',
   letterSpacing: '0.08em',
-  color: '#64748b',
+  color: theme.palette.text.secondary,
   transition: 'color 0.3s ease',
-})
+}))
 
-const ContactValue = styled('span')({
+const ContactValue = styled('span')(({ theme }) => ({
   fontSize: '0.95rem',
   fontWeight: 600,
-  color: '#1e3a8a',
+  color: theme.palette.primary.dark,
   transition: 'color 0.3s ease',
   wordBreak: 'break-word',
-})
+}))
 
 const DetailList = styled('div')({
   display: 'flex',
@@ -168,30 +176,32 @@ const DetailItem = styled('div')({
   gap: '0.25rem',
 })
 
-const DetailLabel = styled('span')({
+const DetailLabel = styled('span')(({ theme }) => ({
   fontSize: '0.8rem',
   fontWeight: 600,
   textTransform: 'uppercase',
   letterSpacing: '0.08em',
-  color: '#64748b',
-})
+  color: theme.palette.text.secondary,
+}))
 
-const DetailValue = styled('span')({
+const DetailValue = styled('span')(({ theme }) => ({
   fontSize: '0.95rem',
   fontWeight: 600,
-  color: '#1e3a8a',
-})
+  color: theme.palette.primary.dark,
+}))
 
-const RightColumn = styled('section')({
+const RightColumn = styled('section')(({ theme }) => ({
   width: '65%',
-  background: '#ffffff',
+  background: theme.palette.background.paper,
   borderRadius: '18px',
-  border: '2px solid #e5e7eb',
+  border: `2px solid ${theme.palette.divider}`,
   padding: '2.75rem',
   display: 'flex',
   flexDirection: 'column',
   gap: '1.75rem',
-  boxShadow: '0 20px 44px rgba(15, 23, 42, 0.12)',
+  boxShadow: theme.palette.mode === 'dark'
+    ? '0 20px 44px rgba(0, 0, 0, 0.3)'
+    : '0 20px 44px rgba(15, 23, 42, 0.12)',
 
   '@media (max-width: 960px)': {
     width: '100%',
@@ -201,28 +211,32 @@ const RightColumn = styled('section')({
   '@media (max-width: 600px)': {
     padding: '1.75rem',
   },
-})
+}))
 
-const HeroTitle = styled('h1')({
+const HeroTitle = styled('h1')(({ theme }) => ({
   fontSize: '2.25rem',
   fontWeight: 700,
   letterSpacing: '-1px',
   margin: 0,
-})
+  padding: '0.5rem 0.75rem',
+  borderRadius: '12px',
+  background: theme.palette.background.default,
+  border: `1px solid ${theme.palette.divider}`,
+}))
 
-const HeroSubtitle = styled('p')({
+const HeroSubtitle = styled('p')(({ theme }) => ({
   fontSize: '1.1rem',
-  color: '#475569',
+  color: theme.palette.text.secondary,
   margin: 0,
   lineHeight: 1.7,
-})
+}))
 
-const StoryText = styled('p')({
+const StoryText = styled('p')(({ theme }) => ({
   fontSize: '1rem',
-  color: '#334155',
+  color: theme.palette.text.secondary,
   margin: 0,
   lineHeight: 1.7,
-})
+}))
 
 const InfoGrid = styled('div')({
   display: 'grid',
@@ -234,10 +248,10 @@ const InfoGrid = styled('div')({
   },
 })
 
-const InfoCard = styled('div')({
-  background: '#f8fafc',
+const InfoCard = styled('div')(({ theme }) => ({
+  background: theme.palette.background.default,
   borderRadius: '14px',
-  border: '1px solid #e5e7eb',
+  border: `1px solid ${theme.palette.divider}`,
   padding: '1.5rem',
   display: 'flex',
   flexDirection: 'column',
@@ -245,25 +259,27 @@ const InfoCard = styled('div')({
   transition: 'all 0.25s ease',
 
   '&:hover': {
-    borderColor: '#1e3a8a',
-    boxShadow: '0 14px 32px rgba(30, 58, 138, 0.15)',
+    borderColor: theme.palette.primary.dark,
+    boxShadow: theme.palette.mode === 'dark'
+      ? '0 14px 32px rgba(0, 0, 0, 0.3)'
+      : '0 14px 32px rgba(30, 58, 138, 0.15)',
     transform: 'translateY(-3px)',
   },
-})
+}))
 
-const InfoTitle = styled('h4')({
+const InfoTitle = styled('h4')(({ theme }) => ({
   fontSize: '0.95rem',
   fontWeight: 700,
-  color: '#1e3a8a',
+  color: theme.palette.primary.dark,
   margin: 0,
-})
+}))
 
-const InfoText = styled('p')({
+const InfoText = styled('p')(({ theme }) => ({
   fontSize: '0.9rem',
-  color: '#475569',
+  color: theme.palette.text.secondary,
   margin: 0,
   lineHeight: 1.6,
-})
+}))
 
 const CTAGroup = styled('div')({
   display: 'flex',
@@ -272,7 +288,7 @@ const CTAGroup = styled('div')({
   flexWrap: 'wrap',
 })
 
-const CTAButton = styled('a')({
+const CTAButton = styled('a')(({ theme }) => ({
   display: 'inline-flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -283,34 +299,36 @@ const CTAButton = styled('a')({
   fontWeight: 600,
   textDecoration: 'none',
   transition: 'all 0.3s ease',
-  background: '#1e3a8a',
-  color: '#ffffff',
+  background: theme.palette.primary.dark,
+  color: theme.palette.background.paper,
   border: '2px solid transparent',
 
   '&:hover': {
     transform: 'translateY(-3px)',
-    boxShadow: '0 12px 28px rgba(30, 58, 138, 0.25)',
-    background: '#2563eb',
+    boxShadow: theme.palette.mode === 'dark'
+      ? '0 12px 28px rgba(0, 0, 0, 0.4)'
+      : '0 12px 28px rgba(30, 58, 138, 0.25)',
+    background: theme.palette.primary.main,
   },
 
   '&.secondary': {
-    background: '#ffffff',
-    color: '#1e3a8a',
-    borderColor: '#1e3a8a',
+    background: theme.palette.background.paper,
+    color: theme.palette.primary.dark,
+    borderColor: theme.palette.primary.dark,
 
     '&:hover': {
-      background: '#1e3a8a',
-      color: '#ffffff',
+      background: theme.palette.primary.dark,
+      color: theme.palette.background.paper,
     },
   },
-})
+}))
 
-const ResponseNote = styled('p')({
+const ResponseNote = styled('p')(({ theme }) => ({
   fontSize: '0.9rem',
-  color: '#475569',
+  color: theme.palette.text.secondary,
   margin: 0,
   lineHeight: 1.6,
-})
+}))
 
 export default function Contact() {
   return (
@@ -326,7 +344,7 @@ export default function Contact() {
           <ContactList>
             <ContactLink href="https://www.linkedin.com/in/mertcil/" target="_blank" rel="noopener noreferrer">
               <IconWrapper className="icon">
-                <LinkedInIcon sx={{ color: '#ffffff', fontSize: '22px' }} />
+                <LinkedInIcon sx={{ color: 'white', fontSize: '22px' }} />
               </IconWrapper>
               <ContactContent>
                 <ContactLabel className="label">LinkedIn</ContactLabel>
@@ -336,7 +354,7 @@ export default function Contact() {
 
             <ContactLink href="mailto:mevlutmert.cil@gmail.com">
               <IconWrapper className="icon">
-                <EmailIcon sx={{ color: '#ffffff', fontSize: '22px' }} />
+                <EmailIcon sx={{ color: 'white', fontSize: '22px' }} />
               </IconWrapper>
               <ContactContent>
                 <ContactLabel className="label">Email</ContactLabel>
@@ -346,7 +364,7 @@ export default function Contact() {
 
             <ContactLink href="https://github.com/mertcil" target="_blank" rel="noopener noreferrer">
               <IconWrapper className="icon">
-                <GitHubIcon sx={{ color: '#ffffff', fontSize: '22px' }} />
+                <GitHubIcon sx={{ color: 'white', fontSize: '22px' }} />
               </IconWrapper>
               <ContactContent>
                 <ContactLabel className="label">GitHub</ContactLabel>

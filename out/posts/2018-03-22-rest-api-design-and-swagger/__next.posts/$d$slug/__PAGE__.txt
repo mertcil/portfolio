@@ -1,0 +1,195 @@
+1:"$Sreact.fragment"
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T2207,<h1>REST API Design and Swagger: Building Self-Documenting APIs</h1>
+<p>REST APIs are the backbone of modern software systems. After designing multiple APIs across different projects, I've learned that great API design is about clarity, consistency, and documentation.</p>
+<p>Start with the consumer in mind. Define use cases, error scenarios, and data shapes collaboratively before writing code. When teams agree on contracts early, implementation becomes straightforward and integrations go live faster.</p>
+<h2>REST Principles</h2>
+<pre><code>GET    /api/v1/customers        → List all customers
+GET    /api/v1/customers/{id}   → Get specific customer
+POST   /api/v1/customers        → Create customer
+PUT    /api/v1/customers/{id}   → Update customer
+DELETE /api/v1/customers/{id}   → Delete customer
+</code></pre>
+<h2>Swagger/OpenAPI Definition</h2>
+<pre><code class="language-yaml">openapi: 3.0.0
+info:
+  title: Customer API
+  version: 1.0.0
+
+paths:
+  /customers:
+    get:
+      summary: List all customers
+      parameters:
+        - name: status
+          in: query
+          schema:
+            type: string
+            enum: [active, inactive]
+      responses:
+        '200':
+          description: List of customers
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Customer'
+
+components:
+  schemas:
+    Customer:
+      type: object
+      required: [id, name, email]
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+          format: email
+        status:
+          type: string
+          enum: [active, inactive]
+</code></pre>
+<h2>Spring REST Controller with Swagger</h2>
+<pre><code class="language-java">@RestController
+@RequestMapping("/api/v1/customers")
+@Tag(name = "Customers", description = "Customer management API")
+public class CustomerController {
+
+    @GetMapping
+    @Operation(summary = "List all customers", description = "Retrieve a paginated list of customers")
+    public ResponseEntity&#x3C;Page&#x3C;CustomerDTO>> listCustomers(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "20") int size,
+            @Parameter(description = "Filter by status") @RequestParam(required = false) String status) {
+        return ResponseEntity.ok(customerService.findAll(page, size, status));
+    }
+
+    @GetMapping("/{id}")
+    @Operation(summary = "Get customer by ID")
+    public ResponseEntity&#x3C;CustomerDTO> getCustomer(
+            @Parameter(description = "Customer ID") @PathVariable Long id) {
+        return ResponseEntity.ok(customerService.findById(id));
+    }
+
+    @PostMapping
+    @Operation(summary = "Create new customer")
+    @ApiResponse(responseCode = "201", description = "Customer created successfully")
+    public ResponseEntity&#x3C;CustomerDTO> createCustomer(
+            @Valid @RequestBody CreateCustomerRequest request) {
+        CustomerDTO customer = customerService.create(request);
+        return ResponseEntity.status(HttpStatus.CREATED).body(customer);
+    }
+
+    @PutMapping("/{id}")
+    @Operation(summary = "Update customer")
+    public ResponseEntity&#x3C;CustomerDTO> updateCustomer(
+            @PathVariable Long id,
+            @Valid @RequestBody UpdateCustomerRequest request) {
+        return ResponseEntity.ok(customerService.update(id, request));
+    }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Delete customer")
+    @ApiResponse(responseCode = "204", description = "Customer deleted successfully")
+    public ResponseEntity&#x3C;Void> deleteCustomer(@PathVariable Long id) {
+        customerService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+}
+</code></pre>
+<h2>Error Handling in APIs</h2>
+<pre><code class="language-java">@RestControllerAdvice
+public class ApiExceptionHandler {
+
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity&#x3C;ErrorResponse> handleNotFound(EntityNotFoundException e) {
+        ErrorResponse error = ErrorResponse.builder()
+            .code("CUSTOMER_NOT_FOUND")
+            .message(e.getMessage())
+            .timestamp(LocalDateTime.now())
+            .build();
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity&#x3C;ErrorResponse> handleValidation(MethodArgumentNotValidException e) {
+        List&#x3C;String> errors = e.getBindingResult()
+            .getAllErrors()
+            .stream()
+            .map(ObjectError::getDefaultMessage)
+            .collect(Collectors.toList());
+
+        ErrorResponse error = ErrorResponse.builder()
+            .code("VALIDATION_ERROR")
+            .message("Validation failed")
+            .details(errors)
+            .timestamp(LocalDateTime.now())
+            .build();
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
+    }
+}
+</code></pre>
+<h2>Pagination and Filtering</h2>
+<pre><code class="language-java">@Service
+public class CustomerService {
+    @Autowired
+    private CustomerRepository repository;
+
+    public Page&#x3C;CustomerDTO> findAll(int page, int size, String status) {
+        Pageable pageable = PageRequest.of(page, size, Sort.by("createdAt").descending());
+
+        Page&#x3C;Customer> customers;
+        if (status != null) {
+            customers = repository.findByStatus(status, pageable);
+        } else {
+            customers = repository.findAll(pageable);
+        }
+
+        return customers.map(this::toDTO);
+    }
+}
+</code></pre>
+<h2>Versioning</h2>
+<pre><code class="language-java">// Version in URL
+@GetMapping("/v1/customers")
+public ResponseEntity&#x3C;List&#x3C;CustomerDTOV1>> listV1() { }
+
+@GetMapping("/v2/customers")
+public ResponseEntity&#x3C;List&#x3C;CustomerDTOV2>> listV2() { }
+
+// Version in header
+@GetMapping("/customers")
+public ResponseEntity&#x3C;?> list(@RequestHeader("API-Version") String version) {
+    if ("2".equals(version)) {
+        return ResponseEntity.ok(v2Data);
+    }
+    return ResponseEntity.ok(v1Data);
+}
+</code></pre>
+<h2>Best Practices</h2>
+<ol>
+<li><strong>Use nouns for resources</strong> - <code>/customers</code>, not <code>/getCustomers</code></li>
+<li><strong>Use HTTP methods correctly</strong> - GET is read-only, POST creates, PUT updates</li>
+<li><strong>Return appropriate status codes</strong> - 200, 201, 400, 404, 500</li>
+<li><strong>Include pagination</strong> - Always paginate large result sets</li>
+<li><strong>Document everything</strong> - Swagger/OpenAPI handles this</li>
+<li><strong>Version your APIs</strong> - Breaking changes need versions</li>
+<li><strong>Validate input</strong> - Never trust client data</li>
+</ol>
+<p>Swagger transformed how we build APIs—from writing documentation manually to generating it automatically from annotations. This keeps documentation always in sync with implementation.</p>
+<h2>Contract Testing and Mock Servers</h2>
+<p>Combine OpenAPI specs with mock servers like Prism or WireMock so frontend teams can build against realistic responses while backends evolve. Add contract tests to CI that validate responses against the spec, ensuring changes do not break consumers silently. This collaboration pattern reduces integration bugs and accelerates delivery.</p>
+<h2>Developer Experience and Governance</h2>
+<p>Well-designed APIs come with a welcoming developer experience. Publish your OpenAPI specs to a developer portal, include code samples in multiple languages, and document rate limits plus authentication flows clearly. Establish an API style guide that covers naming conventions, pagination formats, and standard error payloads. Governance ensures consistency across services, making the entire platform feel cohesive to internal and external consumers alike.</p>
+<h2>Lifecycle Management and Version Strategy</h2>
+<p>APIs evolve. Plan deprecation policies from the start—announce changes, offer migration guides, and provide sandbox environments for testing. Use semantic versioning in OpenAPI specs, but keep public URLs stable whenever possible. Batching breaking changes into predictable release trains reduces churn for consumers.</p>
+<p>Monitor usage analytics to understand which endpoints drive value. Sunsetting underused APIs frees resources for investments elsewhere. Pair analytics with consumer feedback channels to prioritize enhancements that improve developer satisfaction and product impact.</p>0:{"buildId":"7Bpo8tNK9QtQ6qNo25Lcp","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"REST API Design and Swagger: Building Self-Documenting APIs","date":"2018-03-22","author":"Mevlut Mert CIL","category":"API Design","tags":["rest","api","swagger","openapi","documentation"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

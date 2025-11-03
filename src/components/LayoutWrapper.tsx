@@ -27,18 +27,21 @@ const MainContent = styled('div')({
   marginTop: '2rem',
 })
 
-const Panel = styled('div')({
+const Panel = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: '16px',
   padding: '2rem',
-  background: '#ffffff',
-  border: '1px solid #e0e0e0',
-  boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+  background: theme.palette.mode === 'dark' ? '#424242' : '#ffffff', // dark gray in dark mode
+  border: theme.palette.mode === 'dark' ? '1px solid rgba(255,255,255,0.12)' : '1px solid #e0e0e0',
+  boxShadow:
+    theme.palette.mode === 'dark'
+      ? '0 8px 24px rgba(0,0,0,0.35)'
+      : '0 4px 12px rgba(0,0,0,0.1)',
   overflow: 'hidden',
-  color: '#1e3a8a',
+  color: theme.palette.text.primary,
   width: '100%',
-  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif',
-})
+  fontFamily: theme.typography.fontFamily,
+}))
 
 const HeaderPanel = styled('div')({
   width: '100%',

@@ -1,0 +1,71 @@
+1:"$Sreact.fragment"
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:Te5d,<h1>System Design Patterns: Building Scalable Architectures</h1>
+<p>Good system design anticipates growth and handles complexity. Understanding core patterns is essential for building systems that scale.</p>
+<p>Each pattern shines in a specific context. When you know how traffic flows, how data consistency matters, and what failure looks like, you can assemble these building blocks into a platform that is both performant and comprehensible.</p>
+<h2>Load Balancing</h2>
+<pre><code>Multiple Requests
+       ↓
+Load Balancer
+    ↙  ↓  ↖
+Server 1, Server 2, Server 3
+    ↘  ↓  ↙
+  Consistent Response
+</code></pre>
+<h2>Caching Layers</h2>
+<pre><code>Application → Cache (Redis) → Database
+                ↑
+            Store frequent queries
+</code></pre>
+<h2>Database Replication</h2>
+<pre><code>Primary Database (Write)
+        ↓
+    Replication Log
+        ↓
+Replica 1, Replica 2 (Read-only)
+</code></pre>
+<h2>Message Queues</h2>
+<pre><code>Producer → Message Queue (Kafka) → Consumer
+                  ↓
+            Persistent storage
+            Decoupled systems
+</code></pre>
+<h2>Circuit Breaker Pattern</h2>
+<pre><code class="language-typescript">class CircuitBreaker {
+  private failureCount = 0;
+  private state: 'closed' | 'open' | 'half-open' = 'closed';
+
+  async request(fn: () => Promise&#x3C;any>) {
+    if (this.state === 'open') {
+      throw new Error('Circuit is open');
+    }
+
+    try {
+      const result = await fn();
+      this.failureCount = 0;
+      return result;
+    } catch (error) {
+      this.failureCount++;
+      if (this.failureCount >= 5) {
+        this.state = 'open';
+      }
+      throw error;
+    }
+  }
+}
+</code></pre>
+<p>Good system design is about understanding trade-offs: consistency vs availability, latency vs throughput, simplicity vs features.</p>
+<h2>Event-Driven Architectures and Data Pipelines</h2>
+<p>Event-driven systems help decouple producers from consumers. Tools such as Kafka or Pulsar let you fan out updates to downstream services, power search indexes, and support real-time analytics. Remember to define clear schemas and retention policies so new consumers can join without breaking compatibility.</p>
+<p>For analytical workloads, consider a lambda-style architecture where real-time and batch layers coexist. This gives end users timely updates while still allowing cost-effective processing of historical data.</p>
+<h2>Observability and Operational Guardrails</h2>
+<p>Patterns only deliver value when teams can operate them safely. Instrument services with traces that reveal message transit times, cache hit ratios, and replication lag. Add circuit breakers, bulkheads, and rate limiting to contain failures when dependencies misbehave.</p>
+<p>Finally, capture design decisions in Architecture Decision Records (ADRs). Documenting why you chose a pattern—and what alternatives you rejected—helps future maintainers evolve the system without re-learning old lessons the hard way.</p>
+<h2>Governance and Evolution</h2>
+<p>System design has a lifecycle. Establish lightweight architecture councils that review major changes, maintain shared reference architectures, and steward cross-cutting concerns like authentication and messaging. Encourage teams to submit RFCs for new patterns so knowledge spreads and duplication shrinks.</p>
+<p>Designs must evolve with business demands. Set checkpoints—perhaps every six months—where teams revisit capacity assumptions, failure modes, and compliance obligations. Sunset patterns that no longer serve the organization and archive documentation so future engineers understand the legacy landscape.</p>0:{"buildId":"7Bpo8tNK9QtQ6qNo25Lcp","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"System Design Patterns: Building Scalable Architectures","date":"2022-11-15","author":"Mevlut Mert CIL","category":"Architecture","tags":["system-design","patterns","scalability","architecture"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

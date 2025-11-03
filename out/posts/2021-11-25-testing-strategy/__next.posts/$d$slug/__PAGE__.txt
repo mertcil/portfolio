@@ -1,0 +1,78 @@
+1:"$Sreact.fragment"
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T10ae,<h1>Testing Strategy: Unit, Integration, and E2E Tests</h1>
+<p>Quality software requires quality testing. The test pyramid shows where to focus effort for maximum coverage with minimal maintenance burden.</p>
+<p>Treat tests as a living specification. When they describe the desired behavior clearly, newcomers understand features faster and regressions surface before they hit production. Balance speed, reliability, and cost by investing in the right mix of test types.</p>
+<h2>Unit Tests with Jest</h2>
+<pre><code class="language-javascript">describe('UserService', () => {
+  let service: UserService;
+
+  beforeEach(() => {
+    service = new UserService();
+  });
+
+  test('should create user with valid data', () => {
+    const user = service.createUser({ name: 'John', email: 'john@example.com' });
+    expect(user.id).toBeDefined();
+    expect(user.name).toBe('John');
+  });
+
+  test('should throw error for invalid email', () => {
+    expect(() => {
+      service.createUser({ name: 'John', email: 'invalid' });
+    }).toThrow('Invalid email');
+  });
+});
+</code></pre>
+<h2>Integration Tests</h2>
+<pre><code class="language-java">@SpringBootTest
+public class UserServiceIntegrationTest {
+  @Autowired
+  private UserService userService;
+
+  @Autowired
+  private UserRepository repository;
+
+  @Test
+  public void testCreateAndRetrieveUser() {
+    User user = userService.createUser(new CreateUserRequest("John", "john@example.com"));
+    assertNotNull(user.getId());
+
+    User retrieved = repository.findById(user.getId()).orElseThrow();
+    assertEquals("John", retrieved.getName());
+  }
+}
+</code></pre>
+<h2>E2E Tests with Selenium</h2>
+<pre><code class="language-java">public class UserJourneyTest {
+  @Test
+  public void userRegistrationFlow() {
+    WebDriver driver = new ChromeDriver();
+    driver.get("http://localhost:3000/register");
+
+    driver.findElement(By.id("name")).sendKeys("John");
+    driver.findElement(By.id("email")).sendKeys("john@example.com");
+    driver.findElement(By.id("submit")).click();
+
+    String message = driver.findElement(By.className("success")).getText();
+    assertEquals("Registration successful!", message);
+
+    driver.quit();
+  }
+}
+</code></pre>
+<p>Testing pyramid: 70% unit tests, 20% integration tests, 10% E2E tests for optimal ROI.</p>
+<h2>Contract and Consumer-Driven Tests</h2>
+<p>When services communicate via APIs, contract tests keep them honest. Tools like Pact let consumers define expectations that providers must satisfy in CI. This reduces the need for brittle end-to-end tests while still catching breaking changes before deployment. Pair contract tests with schema validation to ensure serialization formats stay compatible.</p>
+<h2>Test Data Management and CI Guardrails</h2>
+<p>Unreliable tests usually stem from unmanaged data. Use factories or builders to create deterministic fixtures, reset databases between runs, and stub third-party integrations. In continuous integration, parallelize suites to keep feedback fast, collect flake statistics, and quarantine tests that fail intermittently until the root cause is fixed.</p>
+<p>Finally, treat testing as a cultural practice. Celebrate bug reports caught by automation, include test impacts in pull request templates, and ensure on-call retrospectives document any gaps discovered during incidents. A disciplined testing strategy keeps engineering velocity high without sacrificing confidence.</p>
+<h2>Chaos and Resilience Testing</h2>
+<p>As distributed systems proliferate, include resilience checks in your test portfolio. Inject latency, kill services, and tamper with message queues in controlled environments. Tools like Chaos Mesh or Gremlin reveal how applications behave when dependencies fail. Document learnings in runbooks and adjust fallbacks based on real-world evidence.</p>
+<h2>Exploratory Testing and UX Quality</h2>
+<p>Automation cannot capture every nuance. Schedule exploratory testing sessions where engineers, designers, and product managers simulate real user journeys. Capture observations in shared documents and translate findings into automated tests where possible. Pair this with accessibility audits to ensure users with assistive technologies receive a polished experience.</p>0:{"buildId":"7Bpo8tNK9QtQ6qNo25Lcp","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"Testing Strategy: Unit, Integration, and E2E Tests","date":"2021-11-25","author":"Mevlut Mert CIL","category":"QA & Testing","tags":["testing","junit","jest","automation"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

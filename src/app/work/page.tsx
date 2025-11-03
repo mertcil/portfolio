@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { styled } from '@mui/material/styles'
 
@@ -14,7 +14,7 @@ type Project = {
 const projects: Project[] = [
   {
     name: 'Diyalog WebRTC Collaboration Platform',
-    timeframe: '2020 – Present',
+    timeframe: '2020 — Present',
     focus: 'Senior Software Development Engineer, Havelsan',
     summary:
       'Built and evolved a full-stack WebRTC platform delivering secure, low-latency meetings for defense and enterprise customers.',
@@ -27,7 +27,7 @@ const projects: Project[] = [
   },
   {
     name: '5G Core Network & Signaling Backbone',
-    timeframe: '2019 – 2020',
+    timeframe: '2019 — 2020',
     focus: 'Software Development Engineer, Havelsan',
     summary:
       'Built cloud-native control plane services for a 5G core network deployment supporting telecom-grade scale.',
@@ -53,7 +53,7 @@ const projects: Project[] = [
   },
   {
     name: 'Embedded Set-Top Box Firmware',
-    timeframe: '2015 – 2018',
+    timeframe: '2015 — 2018',
     focus: 'Software Development Engineer, Vestek (Vestel)',
     summary:
       'Delivered Linux-based firmware releases powering commercial IPTV and hospitality devices.',
@@ -66,7 +66,7 @@ const projects: Project[] = [
   },
   {
     name: 'Enterprise SAP Integration & Reporting',
-    timeframe: '2014 – 2016',
+    timeframe: '2014 — 2016',
     focus: 'ABAP & SAP Development',
     summary:
       'Built SAP/ABAP services that automate finance and supply-chain workflows for large enterprises.',
@@ -92,18 +92,18 @@ const projects: Project[] = [
   },
 ]
 
-const PageContainer = styled('div')({
+const PageContainer = styled('div')(({ theme }) => ({
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
   gap: '2.5rem',
   padding: '3rem 2rem 4rem',
-  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif',
-  color: '#1e3a8a',
-  background: '#f1f5f9',
+  fontFamily: theme.typography.fontFamily,
+  color: theme.palette.text.primary,
+  background: theme.palette.background.default,
   boxSizing: 'border-box',
   borderRadius: '32px',
-})
+}))
 
 const Header = styled('header')({
   display: 'flex',
@@ -121,12 +121,12 @@ const Title = styled('h1')({
   margin: 0,
 })
 
-const Subtitle = styled('p')({
+const Subtitle = styled('p')(({ theme }) => ({
   fontSize: '1.05rem',
   lineHeight: 1.7,
   margin: 0,
-  color: '#334155',
-})
+  color: theme.palette.text.secondary,
+}))
 
 const ProjectsGrid = styled('div')({
   display: 'grid',
@@ -137,23 +137,27 @@ const ProjectsGrid = styled('div')({
   width: '100%',
 })
 
-const ProjectCard = styled('article')({
-  background: '#ffffff',
+const ProjectCard = styled('article')(({ theme }) => ({
+  background: theme.palette.background.paper,
   borderRadius: '18px',
-  border: '1px solid #e2e8f0',
+  border: `1px solid ${theme.palette.divider}`,
   padding: '1.75rem',
   display: 'flex',
   flexDirection: 'column',
   gap: '1rem',
-  boxShadow: '0 18px 40px rgba(30, 58, 138, 0.08)',
+  boxShadow: theme.palette.mode === 'dark'
+    ? '0 18px 40px rgba(0, 0, 0, 0.3)'
+    : '0 18px 40px rgba(30, 58, 138, 0.08)',
   transition: 'all 0.3s ease',
 
   '&:hover': {
     transform: 'translateY(-6px)',
-    borderColor: '#1e3a8a',
-    boxShadow: '0 24px 48px rgba(30, 58, 138, 0.18)',
+    borderColor: theme.palette.primary.dark,
+    boxShadow: theme.palette.mode === 'dark'
+      ? '0 24px 48px rgba(0, 0, 0, 0.5)'
+      : '0 24px 48px rgba(30, 58, 138, 0.18)',
   },
-})
+}))
 
 const ProjectHeader = styled('div')({
   display: 'flex',
@@ -161,36 +165,36 @@ const ProjectHeader = styled('div')({
   gap: '0.4rem',
 })
 
-const ProjectName = styled('h2')({
+const ProjectName = styled('h2')(({ theme }) => ({
   fontSize: '1.25rem',
   fontWeight: 700,
   margin: 0,
-  color: '#1e3a8a',
-})
+  color: theme.palette.text.primary,
+}))
 
-const ProjectMeta = styled('div')({
+const ProjectMeta = styled('div')(({ theme }) => ({
   fontSize: '0.85rem',
   fontWeight: 600,
   textTransform: 'uppercase',
   letterSpacing: '0.08em',
-  color: '#475569',
-})
+  color: theme.palette.text.secondary,
+}))
 
-const ProjectSummary = styled('p')({
+const ProjectSummary = styled('p')(({ theme }) => ({
   fontSize: '0.95rem',
   lineHeight: 1.7,
   margin: 0,
-  color: '#334155',
-})
+  color: theme.palette.text.secondary,
+}))
 
-const HighlightsList = styled('ul')({
+const HighlightsList = styled('ul')(({ theme }) => ({
   listStyle: 'none',
   padding: 0,
   margin: 0,
   display: 'flex',
   flexDirection: 'column',
   gap: '0.65rem',
-  color: '#1e293b',
+  color: theme.palette.text.primary,
   fontSize: '0.9rem',
 
   '& li': {
@@ -200,13 +204,13 @@ const HighlightsList = styled('ul')({
   },
 
   '& li:before': {
-    content: '"▹"',
+    content: '"▸"',
     position: 'absolute',
     left: 0,
-    color: '#2563eb',
+    color: theme.palette.primary.main,
     fontWeight: '700',
   },
-})
+}))
 
 const Tags = styled('div')({
   display: 'flex',
@@ -214,15 +218,19 @@ const Tags = styled('div')({
   gap: '0.5rem',
 })
 
-const Tag = styled('span')({
+const Tag = styled('span')(({ theme }) => ({
   padding: '0.35rem 0.7rem',
   borderRadius: '999px',
-  background: '#e0f2fe',
-  color: '#1d4ed8',
+  background: theme.palette.mode === 'dark'
+    ? 'rgba(33, 150, 243, 0.15)'
+    : '#e0f2fe',
+  color: theme.palette.mode === 'dark'
+    ? theme.palette.primary.light
+    : theme.palette.primary.dark,
   fontSize: '0.75rem',
   fontWeight: 700,
   letterSpacing: '0.05em',
-})
+}))
 
 export default function Work() {
   return (

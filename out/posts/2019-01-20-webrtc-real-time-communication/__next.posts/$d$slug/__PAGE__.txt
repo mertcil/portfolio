@@ -1,0 +1,231 @@
+1:"$Sreact.fragment"
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T23e8,<h1>WebRTC and Real-Time Communication: Building Diyalog Video Platform</h1>
+<p>Real-time video communication over the web seemed like science fiction not long ago. WebRTC changed everything. Building Diyalog, a WebRTC-based meeting platform, taught me about the complexities of peer-to-peer communication, fallback mechanisms, and real-time performance.</p>
+<p>Latency budgets are unforgiving. Every millisecond across the signaling path, TURN relays, or UI render cycle compounds. We obsessed over instrumentation to catch regressions early and to understand how features impacted both bandwidth usage and CPU load on low-powered devices.</p>
+<h2>WebRTC Architecture</h2>
+<pre><code>Browser A → STUN Server → Determine public IP
+         → TURN Server → Relay if needed
+
+Browser A ← Peer Connection → Browser B
+</code></pre>
+<h2>Setting Up WebRTC Connection</h2>
+<pre><code class="language-javascript">// Initialize peer connection
+const peerConnection = new RTCPeerConnection({
+  iceServers: [
+    { urls: 'stun:stun.l.google.com:19302' },
+    { urls: 'stun:stun1.l.google.com:19302' },
+    {
+      urls: 'turn:your-turn-server.com',
+      username: 'user',
+      credential: 'pass'
+    }
+  ]
+});
+
+// Add local stream
+const stream = await navigator.mediaDevices.getUserMedia({
+  video: { width: 1280, height: 720 },
+  audio: true
+});
+
+stream.getTracks().forEach(track => {
+  peerConnection.addTrack(track, stream);
+});
+
+// Create offer
+const offer = await peerConnection.createOffer();
+await peerConnection.setLocalDescription(offer);
+
+// Send offer to remote peer
+signaling.send('offer', offer);
+</code></pre>
+<h2>React Component for Video Display</h2>
+<pre><code class="language-javascript">import React, { useRef, useEffect } from 'react';
+
+export function VideoStream({ stream, label }) {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current &#x26;&#x26; stream) {
+      videoRef.current.srcObject = stream;
+    }
+  }, [stream]);
+
+  return (
+    &#x3C;div className="video-container">
+      &#x3C;video
+        ref={videoRef}
+        autoPlay
+        playsInline
+        muted={label === 'local'}
+        className="video-stream"
+      />
+      &#x3C;p className="video-label">{label}&#x3C;/p>
+    &#x3C;/div>
+  );
+}
+</code></pre>
+<h2>Signaling Server with Node.js</h2>
+<pre><code class="language-javascript">const express = require('express');
+const http = require('http');
+const socketIO = require('socket.io');
+
+const app = express();
+const server = http.createServer(app);
+const io = socketIO(server, {
+  cors: { origin: "*" }
+});
+
+// Track active connections
+const rooms = new Map();
+
+io.on('connection', (socket) => {
+  socket.on('join-room', ({ roomId, userId }) => {
+    socket.join(roomId);
+    socket.broadcast.to(roomId).emit('user-joined', { userId });
+  });
+
+  socket.on('offer', ({ roomId, offer, targetUserId }) => {
+    io.to(roomId).emit('offer-received', { offer, fromUserId: socket.id });
+  });
+
+  socket.on('answer', ({ roomId, answer, targetUserId }) => {
+    io.to(roomId).emit('answer-received', { answer, fromUserId: socket.id });
+  });
+
+  socket.on('ice-candidate', ({ roomId, candidate }) => {
+    socket.broadcast.to(roomId).emit('ice-candidate-received', candidate);
+  });
+
+  socket.on('disconnect', () => {
+    socket.broadcast.emit('user-left', { userId: socket.id });
+  });
+});
+
+server.listen(3000, () => {
+  console.log('Signaling server running on port 3000');
+});
+</code></pre>
+<h2>Handling Network Degradation</h2>
+<pre><code class="language-typescript">class MediaQualityManager {
+  private constraints = {
+    high: { video: { width: 1280, height: 720 }, audio: true },
+    medium: { video: { width: 640, height: 480 }, audio: true },
+    low: { video: { width: 320, height: 240 }, audio: false }
+  };
+
+  adjustQuality(bandwidthMbps: number) {
+    if (bandwidthMbps > 5) {
+      return this.constraints.high;
+    } else if (bandwidthMbps > 1) {
+      return this.constraints.medium;
+    } else {
+      return this.constraints.low;
+    }
+  }
+}
+</code></pre>
+<h2>Redis for Connection State</h2>
+<pre><code class="language-javascript">const redis = require('redis');
+const client = redis.createClient();
+
+// Store active sessions
+async function createSession(roomId, userId) {
+  const session = {
+    userId,
+    roomId,
+    joinedAt: new Date(),
+    isActive: true
+  };
+
+  await client.hSet(`room:${roomId}`, userId, JSON.stringify(session));
+  await client.expire(`room:${roomId}`, 3600); // 1 hour expiry
+}
+
+async function getActiveParticipants(roomId) {
+  const participants = await client.hGetAll(`room:${roomId}`);
+  return Object.values(participants).map(p => JSON.parse(p));
+}
+</code></pre>
+<h2>Performance Monitoring</h2>
+<pre><code class="language-typescript">class ConnectionMonitor {
+  async monitorConnection(peerConnection: RTCPeerConnection) {
+    setInterval(async () => {
+      const stats = await peerConnection.getStats();
+
+      stats.forEach(report => {
+        if (report.type === 'inbound-rtp') {
+          console.log('Incoming bitrate:', report.bytesReceived);
+          console.log('Packets lost:', report.packetsLost);
+        }
+
+        if (report.type === 'outbound-rtp') {
+          console.log('Outgoing bitrate:', report.bytesSent);
+          console.log('Frame rate:', report.framesPerSecond);
+        }
+
+        if (report.type === 'candidate-pair') {
+          if (report.state === 'succeeded') {
+            console.log('Latency:', report.currentRoundTripTime * 1000, 'ms');
+          }
+        }
+      });
+    }, 1000);
+  }
+}
+</code></pre>
+<h2>Handling Connection Failures</h2>
+<pre><code class="language-typescript">class ResilientPeerConnection {
+  private retryAttempts = 0;
+  private maxRetries = 3;
+
+  async establishConnection(remoteOffer: RTCSessionDescriptionInit) {
+    try {
+      await this.peerConnection.setRemoteDescription(
+        new RTCSessionDescription(remoteOffer)
+      );
+
+      const answer = await this.peerConnection.createAnswer();
+      await this.peerConnection.setLocalDescription(answer);
+
+      this.retryAttempts = 0; // Reset on success
+      return answer;
+    } catch (error) {
+      if (this.retryAttempts &#x3C; this.maxRetries) {
+        this.retryAttempts++;
+        console.log(`Retrying... (${this.retryAttempts}/${this.maxRetries})`);
+
+        // Exponential backoff
+        await new Promise(r => setTimeout(r, Math.pow(2, this.retryAttempts) * 100));
+        return this.establishConnection(remoteOffer);
+      }
+
+      throw error;
+    }
+  }
+}
+</code></pre>
+<h2>Key Learnings from Building Diyalog</h2>
+<ol>
+<li><strong>Network is unreliable</strong> - Always have fallbacks</li>
+<li><strong>Real-time communication is CPU-intensive</strong> - Optimize carefully</li>
+<li><strong>Signaling matters</strong> - Choose reliable signaling protocols</li>
+<li><strong>TURN servers are expensive</strong> - But necessary for NAT traversal</li>
+<li><strong>Monitoring is critical</strong> - You can't fix what you can't see</li>
+<li><strong>Users tolerate latency, not disconnections</strong> - Reliability > perfection</li>
+</ol>
+<p>Building Diyalog was one of the most technically challenging projects I've worked on. Real-time communication exposes every weakness in your system—network, CPU, memory, and algorithm efficiency all matter.</p>
+<h2>Scaling Operations and Support</h2>
+<p>As adoption grew, we needed predictable scaling. Autoscaling groups right-sized media servers based on concurrent participants, synthetic clients ran 24/7 to exercise signaling paths, and feature flags let us roll out codec tweaks safely. Support playbooks included steps for gathering browser logs, ICE candidates, and HAR files so we could reproduce tricky issues quickly.</p>
+<h2>Privacy, Compliance, and User Experience</h2>
+<p>Handling live audio and video demands rigorous privacy controls. We encrypted recordings at rest, enforced least privilege access, and implemented consent prompts for screen sharing. UX mattered as much as engineering—clear connection indicators, graceful degradation to audio-only mode, and post-call feedback forms turned raw RTC plumbing into a trustworthy product experience.</p>
+<h2>Analytics and Product Insights</h2>
+<p>To keep improving call quality, we tracked join success rate, average bitrate, network degradation incidents, and customer satisfaction scores. Dashboards correlated technical metrics with user sentiment, enabling targeted improvements. For example, we noticed higher drop rates on mobile networks, prompting optimizations to adaptive bitrate logic and UI hints that suggested switching to Wi-Fi.</p>
+<h2>Future Directions</h2>
+<p>WebRTC continues to evolve with standardized data channels, end-to-end encryption for multiparty calls, and WebTransport integrations. Staying engaged with community forums and W3C updates ensures your platform keeps pace. Experiment with AI-driven noise suppression or background effects cautiously—evaluate CPU impact and gather user feedback before rolling out widely.</p>0:{"buildId":"7Bpo8tNK9QtQ6qNo25Lcp","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"WebRTC and Real-Time Communication: Building Diyalog Video Platform","date":"2019-01-20","author":"Mevlut Mert CIL","category":"Real-Time Systems","tags":["webrtc","react","node.js","real-time","video"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

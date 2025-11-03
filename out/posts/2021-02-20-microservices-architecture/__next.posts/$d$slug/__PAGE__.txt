@@ -1,0 +1,57 @@
+1:"$Sreact.fragment"
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:Te1c,<h1>Microservices Architecture: Scaling Beyond Monoliths</h1>
+<p>As systems grow, monolithic architectures become bottlenecks. Microservices decompose applications into independently deployable services.</p>
+<p>Choose microservices for organizational reasons, not just technical elegance. If teams can own services end-to-end, deploy independently, and respond to domain-specific needs, the architecture aligns with Conway’s Law. Otherwise, the overhead may outweigh the benefits.</p>
+<h2>Service Boundaries</h2>
+<pre><code>Monolith:
+[All business logic in one codebase]
+
+Microservices:
+[User Service] [Order Service] [Payment Service] [Inventory Service]
+     ↓               ↓                  ↓              ↓
+  Database A    Database B        Database C    Database D
+</code></pre>
+<h2>Docker Containerization</h2>
+<pre><code class="language-dockerfile">FROM node:16-alpine
+WORKDIR /app
+COPY package*.json ./
+RUN npm install --production
+COPY . .
+EXPOSE 3000
+CMD ["node", "server.js"]
+</code></pre>
+<h2>Service Communication</h2>
+<pre><code class="language-javascript">// REST API calls between services
+const orderService = {
+  async createOrder(customerId, items) {
+    // Call inventory service
+    const inventory = await fetch('http://inventory-service/check', {
+      method: 'POST',
+      body: JSON.stringify({ items })
+    }).then(r => r.json());
+
+    // Call payment service
+    const payment = await fetch('http://payment-service/process', {
+      method: 'POST',
+      body: JSON.stringify({ customerId, amount: total })
+    }).then(r => r.json());
+
+    return { orderId: 123, status: 'confirmed' };
+  }
+};
+</code></pre>
+<p>Microservices enable teams to work independently and scale services based on demand, but complexity increases significantly.</p>
+<h2>Data Ownership and Consistency</h2>
+<p>Each service should own its data, exposing changes via events or well-defined APIs. Embrace eventual consistency for cross-service workflows: use outbox patterns to publish domain events, orchestrate sagas for multi-step transactions, and track idempotency keys to avoid duplicate processing. Document data contracts so analytics teams know how to join datasets without creating hidden dependencies.</p>
+<h2>Observability, Deployment, and Governance</h2>
+<p>Distributed systems demand robust observability. Implement trace IDs that flow across services, centralize logs, and maintain dashboards that highlight latency, error rates, and message backlog depth. Automate deployment pipelines with canary releases or progressive rollouts, and enforce security baselines like mutual TLS and least-privilege IAM roles.</p>
+<p>Finally, create a lightweight governance model: architecture reviews for new services, shared libraries for cross-cutting concerns, and platform tooling that standardizes scaffolding. Microservices thrive when guardrails keep teams aligned without stifling autonomy.</p>
+<h2>Organizational Readiness and Team Topologies</h2>
+<p>Microservices change how teams collaborate. Adopt team topologies that clarify ownership—stream-aligned teams focus on specific domains, while platform teams provide reusable capabilities. Clearly define service-level objectives (SLOs) and error budgets so teams understand operational expectations.</p>
+<p>Invest in documentation that maps service dependencies, API contracts, and on-call schedules. Quarterly architecture reviews ensure new services align with business goals and guard against duplication. With intentional organization design, microservices increase, rather than fracture, team velocity.</p>0:{"buildId":"7Bpo8tNK9QtQ6qNo25Lcp","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"Microservices Architecture: Scaling Beyond Monoliths","date":"2021-02-20","author":"Mevlut Mert CIL","category":"Architecture","tags":["microservices","architecture","scaling","docker"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

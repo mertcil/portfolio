@@ -2,30 +2,32 @@
 
 import { styled } from '@mui/material/styles'
 
-const FooterElement = styled('footer')({
+const FooterElement = styled('footer')(({ theme }) => ({
   backgroundColor: 'transparent',
-  padding: '1rem 0', // py-4
-  fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif',
-})
+  padding: '1rem 0',
+  fontFamily: theme.typography.fontFamily,
+}))
 
 const FooterInner = styled('div')({
   container: 'auto',
   margin: '0 auto',
-  padding: '0 1.5rem', // px-6
+  padding: '0 1.5rem',
   textAlign: 'center',
 })
 
-const FooterText = styled('p')({
-  color: '#ffffff',
+const FooterText = styled('p')(({ theme }) => ({
+  color: theme.palette.text.secondary,
   margin: 0,
-})
+  fontSize: '0.875rem',
+}))
 
 export default function Footer() {
   return (
     <FooterElement>
       <FooterInner>
-        <FooterText>© 2025 Mevlüt Mert ÇİL. All rights reserved.</FooterText>
+        <FooterText>© 2025 Mevlut Mert CIL. All rights reserved.</FooterText>
       </FooterInner>
     </FooterElement>
   )
 }
+

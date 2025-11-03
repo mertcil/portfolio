@@ -198,10 +198,10 @@ const MainContent = styled('div')({
   gap: '1.6rem',
 })
 
-const SectionCard = styled('div')({
-  background: '#ffffff',
+const SectionCard = styled('div')(({ theme }) => ({
+  background: theme.palette.background.paper,
   borderRadius: '12px',
-  border: '2px solid #e5e7eb',
+  border: `2px solid ${theme.palette.divider}`,
   padding: '0.6rem 0.9rem 0.9rem',
   display: 'flex',
   flexDirection: 'column',
@@ -209,29 +209,31 @@ const SectionCard = styled('div')({
   transition: 'all 0.3s ease',
 
   '&:hover': {
-    borderColor: '#1e3a8a',
+    borderColor: theme.palette.primary.dark,
     transform: 'translateY(-2px)',
-    boxShadow: '0 8px 20px rgba(30, 58, 138, 0.15)',
+    boxShadow: theme.palette.mode === 'dark'
+      ? '0 8px 20px rgba(0, 0, 0, 0.5)'
+      : '0 8px 20px rgba(30, 58, 138, 0.15)',
   },
-})
+}))
 
-const SectionTitle = styled('h2')({
+const SectionTitle = styled('h2')(({ theme }) => ({
   fontSize: '1rem',
   fontWeight: '700',
   letterSpacing: '0.05em',
   textTransform: 'uppercase',
-  color: '#1e3a8a',
+  color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.primary.dark,
   margin: 0,
-  borderBottom: '2px solid #1e3a8a',
+  borderBottom: `2px solid ${theme.palette.primary.dark}`,
   paddingBottom: '0.5rem',
-})
+}))
 
-const SummaryText = styled('p')({
+const SummaryText = styled('p')(({ theme }) => ({
   fontSize: '0.95rem',
   lineHeight: 1.7,
-  color: '#334155',
+  color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary,
   margin: 0,
-})
+}))
 
 const ExperienceList = styled('div')({
   display: 'flex',
@@ -239,10 +241,12 @@ const ExperienceList = styled('div')({
   gap: '1rem',
 })
 
-const ExperienceAccordion = styled(Accordion)({
-  border: '1px solid #e5e7eb',
+const ExperienceAccordion = styled(Accordion)(({ theme }) => ({
+  border: `1px solid ${theme.palette.divider}`,
   borderRadius: '10px !important',
-  background: '#f8fafc',
+  background: theme.palette.mode === 'dark'
+    ? theme.palette.background.default
+    : theme.palette.background.default,
   boxShadow: 'none',
   overflow: 'hidden',
   transition: 'all 0.2s ease',
@@ -252,20 +256,24 @@ const ExperienceAccordion = styled(Accordion)({
   },
 
   '&:hover': {
-    borderColor: '#1e3a8a',
-    boxShadow: '0 6px 18px rgba(30, 58, 138, 0.12)',
+    borderColor: theme.palette.primary.dark,
+    boxShadow: theme.palette.mode === 'dark'
+      ? '0 6px 18px rgba(0, 0, 0, 0.4)'
+      : '0 6px 18px rgba(30, 58, 138, 0.12)',
     transform: 'translateY(-2px)',
   },
 
   '&.Mui-expanded': {
     margin: 0,
-    borderColor: '#1e3a8a',
+    borderColor: theme.palette.primary.dark,
   },
-})
+}))
 
-const ExperienceSummary = styled(AccordionSummary)({
+const ExperienceSummary = styled(AccordionSummary)(({ theme }) => ({
   padding: 0,
-  background: '#f8fafc',
+  background: theme.palette.mode === 'dark'
+    ? theme.palette.background.default
+    : theme.palette.background.default,
   '& .MuiAccordionSummary-content': {
     margin: 0,
     padding: '1.35rem 1.6rem',
@@ -277,25 +285,27 @@ const ExperienceSummary = styled(AccordionSummary)({
     margin: 0,
   },
   '& .MuiAccordionSummary-expandIconWrapper': {
-    color: '#1e3a8a',
+    color: theme.palette.primary.dark,
     transition: 'color 0.2s ease',
   },
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-    color: '#2563eb',
+    color: theme.palette.primary.main,
   },
   '&:hover': {
-    background: '#e0f2fe',
+    background: theme.palette.mode === 'dark'
+      ? 'rgba(33, 150, 243, 0.1)'
+      : '#e0f2fe',
   },
   '&:hover .MuiAccordionSummary-expandIconWrapper': {
-    color: '#2563eb',
+    color: theme.palette.primary.main,
   },
-})
+}))
 
-const ExperienceDetails = styled(AccordionDetails)({
+const ExperienceDetails = styled(AccordionDetails)(({ theme }) => ({
   padding: '1.15rem 1.6rem 1.5rem',
-  background: '#ffffff',
-  borderTop: '1px solid #e2e8f0',
-})
+  background: theme.palette.background.paper,
+  borderTop: `1px solid ${theme.palette.divider}`,
+}))
 
 const SummaryContent = styled('div')({
   display: 'flex',
@@ -311,27 +321,27 @@ const JobHeader = styled('div')({
   flexWrap: 'wrap',
 })
 
-const JobTitle = styled('h3')({
+const JobTitle = styled('h3')(({ theme }) => ({
   fontSize: '1.05rem',
   fontWeight: '700',
-  color: '#1e3a8a',
+  color: theme.palette.primary.dark,
   margin: 0,
-})
+}))
 
-const JobDate = styled('span')({
+const JobDate = styled('span')(({ theme }) => ({
   fontSize: '0.85rem',
   fontWeight: '600',
-  color: '#2563eb',
-})
+  color: theme.palette.primary.main,
+}))
 
-const JobCompany = styled('p')({
+const JobCompany = styled('p')(({ theme }) => ({
   fontSize: '0.95rem',
-  color: '#334155',
+  color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary,
   margin: 0,
   fontWeight: '500',
-})
+}))
 
-const JobDescription = styled('ul')({
+const JobDescription = styled('ul')(({ theme }) => ({
   listStyle: 'none',
   padding: 0,
   margin: 0,
@@ -339,7 +349,7 @@ const JobDescription = styled('ul')({
   '& li': {
     fontSize: '0.9rem',
     lineHeight: 1.7,
-    color: '#475569',
+    color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary,
     marginBottom: '0.5rem',
     paddingLeft: '1.2rem',
     position: 'relative',
@@ -348,19 +358,19 @@ const JobDescription = styled('ul')({
       content: '"•"',
       position: 'absolute',
       left: 0,
-      color: '#0ea5e9',
+      color: theme.palette.primary.light,
       fontWeight: 'bold',
     },
 
     '& strong': {
-      color: '#1e3a8a',
+      color: theme.palette.primary.dark,
     },
 
     '&:last-child': {
       marginBottom: 0,
     },
   },
-})
+}))
 
 const EducationList = styled('div')({
   display: 'flex',
@@ -368,11 +378,13 @@ const EducationList = styled('div')({
   gap: '1rem',
 })
 
-const EducationItem = styled('div')({
+const EducationItem = styled('div')(({ theme }) => ({
   padding: '1.35rem 1.6rem',
   borderRadius: '14px',
-  border: '1px solid #e5e7eb',
-  background: '#f8fafc',
+  border: `1px solid ${theme.palette.divider}`,
+  background: theme.palette.mode === 'dark'
+    ? theme.palette.background.default
+    : theme.palette.background.default,
   display: 'flex',
   flexDirection: 'column',
   gap: '0.6rem',
@@ -380,20 +392,24 @@ const EducationItem = styled('div')({
   boxShadow: '0 0 0 rgba(30, 58, 138, 0)',
 
   '&:hover': {
-    borderColor: '#1e3a8a',
-    background: '#e0f2fe',
+    borderColor: theme.palette.primary.dark,
+    background: theme.palette.mode === 'dark'
+      ? 'rgba(33, 150, 243, 0.1)'
+      : '#e0f2fe',
     transform: 'translateY(-3px)',
-    boxShadow: '0 12px 25px rgba(30, 58, 138, 0.18)',
+    boxShadow: theme.palette.mode === 'dark'
+      ? '0 12px 25px rgba(0, 0, 0, 0.4)'
+      : '0 12px 25px rgba(30, 58, 138, 0.18)',
   },
-})
+}))
 
-const EducationSchool = styled('h3')({
+const EducationSchool = styled('h3')(({ theme }) => ({
   fontSize: '1.05rem',
   fontWeight: '700',
   letterSpacing: '-0.3px',
-  color: '#1e3a8a',
+  color: theme.palette.primary.dark,
   margin: 0,
-})
+}))
 
 const EducationMeta = styled('div')({
   display: 'flex',
@@ -403,24 +419,24 @@ const EducationMeta = styled('div')({
   gap: '0.6rem',
 })
 
-const EducationDate = styled('span')({
+const EducationDate = styled('span')(({ theme }) => ({
   fontSize: '0.85rem',
   fontWeight: '600',
-  color: '#2563eb',
-})
+  color: theme.palette.primary.main,
+}))
 
-const EducationFocus = styled('span')({
+const EducationFocus = styled('span')(({ theme }) => ({
   fontSize: '0.85rem',
-  color: '#475569',
+  color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary,
   fontWeight: '500',
-})
+}))
 
-const EducationDegree = styled('p')({
+const EducationDegree = styled('p')(({ theme }) => ({
   fontSize: '0.9rem',
-  color: '#334155',
+  color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary,
   margin: 0,
   lineHeight: 1.6,
-})
+}))
 
 const ReferenceList = styled('div')({
   display: 'flex',
@@ -428,55 +444,59 @@ const ReferenceList = styled('div')({
   gap: '1rem',
 })
 
-const ReferenceItem = styled('div')({
+const ReferenceItem = styled('div')(({ theme }) => ({
   padding: '1rem 1.25rem',
   borderRadius: '10px',
-  border: '1px solid #e5e7eb',
-  background: '#f8fafc',
+  border: `1px solid ${theme.palette.divider}`,
+  background: theme.palette.mode === 'dark'
+    ? theme.palette.background.default
+    : theme.palette.background.default,
   display: 'flex',
   flexDirection: 'column',
   gap: '0.5rem',
   transition: 'all 0.2s ease',
 
   '&:hover': {
-    borderColor: '#1e3a8a',
-    background: '#e0f2fe',
+    borderColor: theme.palette.primary.dark,
+    background: theme.palette.mode === 'dark'
+      ? 'rgba(33, 150, 243, 0.1)'
+      : '#e0f2fe',
     transform: 'translateY(-2px)',
   },
-})
+}))
 
-const ReferenceName = styled('h3')({
+const ReferenceName = styled('h3')(({ theme }) => ({
   fontSize: '0.95rem',
   fontWeight: '700',
-  color: '#1e3a8a',
+  color: theme.palette.primary.dark,
   margin: 0,
-})
+}))
 
-const ReferenceRole = styled('p')({
+const ReferenceRole = styled('p')(({ theme }) => ({
   fontSize: '0.85rem',
-  color: '#334155',
+  color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary,
   margin: 0,
   lineHeight: 1.5,
-})
+}))
 
-const ReferenceLink = styled('a')({
+const ReferenceLink = styled('a')(({ theme }) => ({
   fontSize: '0.85rem',
-  color: '#2563eb',
+  color: theme.palette.primary.main,
   textDecoration: 'none',
   fontWeight: '500',
   transition: 'color 0.2s ease',
 
   '&:hover': {
-    color: '#1e3a8a',
+    color: theme.palette.primary.dark,
     textDecoration: 'underline',
   },
-})
+}))
 
-const ReferenceContact = styled('p')({
+const ReferenceContact = styled('p')(({ theme }) => ({
   fontSize: '0.8rem',
-  color: '#64748b',
+  color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary,
   margin: 0,
-})
+}))
 
 export default function RightSide() {
   return (

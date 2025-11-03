@@ -9,36 +9,38 @@ const Sidebar = styled('div')({
   overflowY: 'auto',
 })
 
-const SectionCard = styled('div')({
+const SectionCard = styled('div')(({ theme }) => ({
   marginBottom: '1.5rem',
   padding: '0.6rem 0.85rem 0.85rem',
-  background: '#ffffff',
+  background: theme.palette.background.paper,
   borderRadius: '12px',
-  border: '2px solid #e5e7eb',
+  border: `2px solid ${theme.palette.divider}`,
   transition: 'all 0.3s ease',
 
   '&:hover': {
-    borderColor: '#1e3a8a',
+    borderColor: theme.palette.primary.dark,
     transform: 'translateY(-2px)',
-    boxShadow: '0 8px 20px rgba(30, 58, 138, 0.15)',
+    boxShadow: theme.palette.mode === 'dark'
+      ? '0 8px 20px rgba(0, 0, 0, 0.5)'
+      : '0 8px 20px rgba(30, 58, 138, 0.15)',
   },
-})
+}))
 
-const SectionTitle = styled('h2')({
+const SectionTitle = styled('h2')(({ theme }) => ({
   fontSize: '1rem',
   fontWeight: '700',
   letterSpacing: '0.05em',
   marginBottom: '1rem',
   textTransform: 'uppercase',
-  color: '#1e3a8a',
-  borderBottom: '2px solid #1e3a8a',
+  color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.primary.dark,
+  borderBottom: `2px solid ${theme.palette.primary.dark}`,
   paddingBottom: '0.5rem',
-})
+}))
 
-const ItemText = styled('div')({
+const ItemText = styled('div')(({ theme }) => ({
   fontSize: '0.9rem',
   lineHeight: '1.6',
-  color: '#334155',
+  color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary,
   marginBottom: '0.5rem',
 
   '& ul': {
@@ -48,34 +50,38 @@ const ItemText = styled('div')({
   '& li': {
     marginBottom: '0.25rem',
   },
-})
+}))
 
-const SkillCategory = styled('div')({
+const SkillCategory = styled('div')(({ theme }) => ({
   marginBottom: '1rem',
   padding: '1rem',
-  background: '#f8fafc',
+  background: theme.palette.mode === 'dark'
+    ? theme.palette.background.default
+    : theme.palette.background.default,
   borderRadius: '8px',
-  border: '1px solid #e5e7eb',
+  border: `1px solid ${theme.palette.divider}`,
   transition: 'all 0.2s ease',
 
   '&:hover': {
-    background: '#e0f2fe',
-    borderColor: '#0ea5e9',
+    background: theme.palette.mode === 'dark'
+      ? 'rgba(33, 150, 243, 0.1)'
+      : '#e0f2fe',
+    borderColor: theme.palette.primary.light,
   },
 
   '&:last-child': {
     marginBottom: 0,
   },
-})
+}))
 
-const SkillName = styled('div')({
+const SkillName = styled('div')(({ theme }) => ({
   fontSize: '0.9rem',
   fontWeight: '700',
   marginBottom: '0.5rem',
-  color: '#1e3a8a',
-})
+  color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.primary.dark,
+}))
 
-const SkillList = styled('ul')({
+const SkillList = styled('ul')(({ theme }) => ({
   listStyle: 'none',
   padding: 0,
   margin: 0,
@@ -83,7 +89,7 @@ const SkillList = styled('ul')({
   '& li': {
     fontSize: '0.85rem',
     lineHeight: '1.5',
-    color: '#475569',
+    color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary,
     marginBottom: '0.25rem',
     paddingLeft: '1rem',
     position: 'relative',
@@ -92,40 +98,44 @@ const SkillList = styled('ul')({
       content: '"•"',
       position: 'absolute',
       left: 0,
-      color: '#0ea5e9',
+      color: theme.palette.primary.light,
       fontWeight: 'bold',
     },
   },
-})
+}))
 
-const ContactItem = styled('div')({
+const ContactItem = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   gap: '0.75rem',
   padding: '0.75rem',
   marginBottom: '0.5rem',
-  background: '#f8fafc',
+  background: theme.palette.mode === 'dark'
+    ? theme.palette.background.default
+    : theme.palette.background.default,
   borderRadius: '8px',
   fontSize: '0.9rem',
-  color: '#334155',
-  border: '1px solid #e5e7eb',
+  color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary,
+  border: `1px solid ${theme.palette.divider}`,
   transition: 'all 0.2s ease',
 
   '&:hover': {
-    background: '#dbeafe',
-    borderColor: '#3b82f6',
+    background: theme.palette.mode === 'dark'
+      ? 'rgba(33, 150, 243, 0.1)'
+      : '#dbeafe',
+    borderColor: theme.palette.primary.main,
     transform: 'translateX(4px)',
   },
 
   '&:last-child': {
     marginBottom: 0,
   },
-})
+}))
 
-const AccomplishmentItem = styled('li')({
+const AccomplishmentItem = styled('li')(({ theme }) => ({
   fontSize: '0.85rem',
   lineHeight: '1.6',
-  color: '#475569',
+  color: theme.palette.mode === 'dark' ? theme.palette.text.primary : theme.palette.text.secondary,
   marginBottom: '0.75rem',
   paddingLeft: '1.2rem',
   position: 'relative',
@@ -137,45 +147,51 @@ const AccomplishmentItem = styled('li')({
     color: '#10b981',
     fontWeight: 'bold',
   },
-})
+}))
 
-const NetworkLink = styled('a')({
+const NetworkLink = styled('a')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   gap: '0.75rem',
   padding: '0.75rem',
-  background: '#f8fafc',
+  background: theme.palette.mode === 'dark'
+    ? theme.palette.background.default
+    : theme.palette.background.default,
   borderRadius: '8px',
   fontSize: '0.9rem',
-  color: '#334155',
-  border: '1px solid #e5e7eb',
+  color: theme.palette.text.secondary,
+  border: `1px solid ${theme.palette.divider}`,
   textDecoration: 'none',
   transition: 'all 0.2s ease',
 
   '&:hover': {
-    background: '#1e3a8a',
-    borderColor: '#1e3a8a',
-    color: '#ffffff',
+    background: theme.palette.primary.dark,
+    borderColor: theme.palette.primary.dark,
+    color: theme.palette.background.paper,
     transform: 'translateX(4px)',
-    boxShadow: '0 4px 12px rgba(30, 58, 138, 0.3)',
+    boxShadow: theme.palette.mode === 'dark'
+      ? '0 4px 12px rgba(0, 0, 0, 0.5)'
+      : '0 4px 12px rgba(30, 58, 138, 0.3)',
 
     '& .icon': {
-      color: '#ffffff',
+      color: theme.palette.background.paper,
     },
   },
-})
+}))
 
-const IconWrapper = styled('div')({
+const IconWrapper = styled('div')(({ theme }) => ({
   width: '32px',
   height: '32px',
   borderRadius: '6px',
-  background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)',
+  background: theme.palette.mode === 'dark'
+    ? `linear-gradient(135deg, ${theme.palette.primary.dark} 0%, ${theme.palette.primary.main} 100%)`
+    : 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   flexShrink: 0,
   transition: 'all 0.3s ease',
-})
+}))
 
 const NetworkText = styled('span')({
   fontSize: '0.9rem',

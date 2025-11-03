@@ -1,0 +1,79 @@
+1:"$Sreact.fragment"
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T10b6,<h1>Observability and Monitoring: Seeing Your Systems in Production</h1>
+<p>Observability answers: "What's happening in my system?" It's built on three pillars: logs, metrics, and traces.</p>
+<p>Great observability also depends on context. Logs should link to request identifiers, spans should carry customer IDs, and dashboards must surface the business impact of outages—not just CPU graphs. Translate raw telemetry into narratives that on-call engineers and product stakeholders can both understand.</p>
+<h2>Structured Logging</h2>
+<pre><code class="language-typescript">import winston from 'winston';
+
+const logger = winston.createLogger({
+  format: winston.format.json(),
+  transports: [
+    new winston.transports.File({ filename: 'error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'combined.log' })
+  ]
+});
+
+logger.info('User registered', {
+  userId: user.id,
+  email: user.email,
+  timestamp: new Date().toISOString()
+});
+</code></pre>
+<h2>Metrics Collection</h2>
+<pre><code class="language-javascript">const prometheus = require('prom-client');
+
+const httpRequestDuration = new prometheus.Histogram({
+  name: 'http_request_duration_ms',
+  help: 'Duration of HTTP requests in ms',
+  labelNames: ['method', 'route', 'status_code'],
+  buckets: [0.1, 5, 15, 50, 100, 500]
+});
+
+app.use((req, res, next) => {
+  const start = Date.now();
+  res.on('finish', () => {
+    const duration = Date.now() - start;
+    httpRequestDuration
+      .labels(req.method, req.route.path, res.statusCode)
+      .observe(duration);
+  });
+  next();
+});
+</code></pre>
+<h2>Distributed Tracing</h2>
+<pre><code class="language-javascript">const opentelemetry = require('@opentelemetry/api');
+const trace = opentelemetry.trace.getTracer('app');
+
+async function processOrder(orderId) {
+  const span = trace.startSpan('processOrder');
+  span.setAttributes({ orderId });
+
+  try {
+    const span2 = trace.startSpan('validateOrder');
+    // validation logic
+    span2.end();
+
+    const span3 = trace.startSpan('processPayment');
+    // payment logic
+    span3.end();
+  } finally {
+    span.end();
+  }
+}
+</code></pre>
+<p>Observability enables rapid problem diagnosis and continuous improvement in production systems.</p>
+<h2>Alerting, SLOs, and Runbooks</h2>
+<p>Define service level objectives (SLOs) that tie directly to user experience. Track error budgets and resist the temptation to alert on every metric. Instead, reserve paging alerts for symptoms customers can feel, like elevated latency or failure rates. For everything else, rely on dashboards and weekly reviews.</p>
+<p>Complement telemetry with human-centered documentation. Maintain up-to-date runbooks that describe mitigation steps, escalation paths, and communication templates. When incidents occur, the combination of high-fidelity data and clear instructions shortens mean time to recovery dramatically.</p>
+<h2>Culture of Continuous Improvement</h2>
+<p>Observability tooling is only valuable when teams use it. Encourage engineers to instrument new code, add exemplars to traces, and link dashboards in pull requests. Conduct post-incident reviews that focus on learning rather than blame. Over time, this culture builds intuition about system behavior and empowers teams to ship faster with confidence.</p>
+<h2>Toolchain Evolution and Vendor Strategy</h2>
+<p>Observability stacks rarely stay static. Evaluate whether to build in-house with open source tools (Prometheus, Loki, Tempo) or leverage managed platforms. Factor in data retention, query latency, and compliance requirements when assessing vendors. Keep exit strategies documented—schema definitions, export scripts, retention policies—so you can migrate without losing historical context.</p>
+<h2>Automation and Self-Healing</h2>
+<p>Once visibility is in place, aim for autonomy. Automate runbook steps such as scaling services or clearing queues. Introduce anomaly detection that flags unusual patterns before they escalate. Couple alerts with ChatOps bots that provide context—recent deploys, related incidents, dependency graphs—so responders hit the ground running. Observability shines brightest when it feeds automation that prevents small issues from becoming major disruptions.</p>0:{"buildId":"7Bpo8tNK9QtQ6qNo25Lcp","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"Observability and Monitoring: Seeing Your Systems in Production","date":"2023-01-30","author":"Mevlut Mert CIL","category":"Infrastructure","tags":["observability","monitoring","logging","tracing"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

@@ -1,0 +1,83 @@
+1:"$Sreact.fragment"
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:Tf98,<h1>TypeScript Adoption: From JavaScript to Strongly Typed Systems</h1>
+<p>JavaScript's flexibility is both a blessing and a curse. TypeScript adds the structure and safety that large codebases need while maintaining JavaScript's expressiveness.</p>
+<p>Successful adoption requires more than flipping a compiler flag. Start with a pilot service, collect metrics on defect rates and developer feedback, then roll out incrementally while investing in training and tooling.</p>
+<h2>Type Basics</h2>
+<pre><code class="language-typescript">// Primitive types
+const name: string = "John";
+const age: number = 25;
+const active: boolean = true;
+
+// Union types
+type Status = "active" | "inactive" | "pending";
+const userStatus: Status = "active";
+
+// Interfaces
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  age?: number; // Optional
+  readonly createdAt: Date; // Readonly
+}
+
+// Classes with types
+class UserService {
+  getUser(id: number): User | null {
+    // Implementation
+    return null;
+  }
+}
+</code></pre>
+<h2>Generic Types</h2>
+<pre><code class="language-typescript">interface ApiResponse&#x3C;T> {
+  status: number;
+  data: T;
+  message: string;
+}
+
+interface User {
+  id: number;
+  name: string;
+}
+
+async function fetchUser(id: number): Promise&#x3C;ApiResponse&#x3C;User>> {
+  const response = await fetch(`/api/users/${id}`);
+  return response.json();
+}
+</code></pre>
+<h2>Advanced Patterns</h2>
+<pre><code class="language-typescript">// Discriminated unions
+type Result&#x3C;T> =
+  | { status: 'success'; data: T }
+  | { status: 'error'; error: Error };
+
+function handleResult&#x3C;T>(result: Result&#x3C;T>) {
+  if (result.status === 'success') {
+    console.log(result.data);
+  } else {
+    console.error(result.error);
+  }
+}
+
+// Utility types
+type ReadonlyUser = Readonly&#x3C;User>;
+type PartialUser = Partial&#x3C;User>;
+type UserKeys = keyof User;
+</code></pre>
+<p>Migration to TypeScript improves code reliability, enables better tooling, and catches errors at compile time rather than runtime.</p>
+<h2>Migration Strategy and Tooling</h2>
+<p>Introduce TypeScript gradually. Begin by renaming files to <code>.ts</code> or <code>.tsx</code>, enable <code>allowJs</code>, and tighten compiler options as the codebase becomes type-safe. Adopt ESLint with TypeScript-specific rules, configure path aliases in <code>tsconfig.json</code>, and lean on editors like VS Code for in-line type intelligence.</p>
+<p>Automate type checks in CI and block merges when <code>tsc --noEmit</code> fails. For packages consumed by other teams, publish declaration files and document public interfaces. These guardrails ensure type coverage keeps pace with feature development.</p>
+<h2>Team Enablement and Metrics</h2>
+<p>Provide workshops, code-along sessions, and shared cheat sheets that demystify generics, utility types, and declaration merging. Track key metrics—build times, bug density, and number of <code>any</code> usages—to quantify progress. Celebrate wins when the compiler catches issues that would have surfaced in production. TypeScript adoption is a journey, but the payoff in confidence and maintainability is substantial.</p>
+<h2>Governance and Cross-Team Alignment</h2>
+<p>Large organizations benefit from a TypeScript working group that maintains style guides, linting rules, and recommended library patterns. Publish reusable types for shared APIs, define how to handle breaking changes, and curate sample projects that illustrate best practices. Governance keeps codebases consistent even as new teams onboard.</p>
+<h2>Measuring Business Impact</h2>
+<p>Tie adoption to business outcomes. Compare incident counts before and after TypeScript, survey developer confidence, and measure onboarding speed for new engineers. Present findings to leadership to secure ongoing investment in tooling, CI resources, and training. When the business sees clear ROI, momentum for TypeScript becomes unstoppable.</p>0:{"buildId":"7Bpo8tNK9QtQ6qNo25Lcp","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"TypeScript Adoption: From JavaScript to Strongly Typed Systems","date":"2020-09-10","author":"Mevlut Mert CIL","category":"Frontend Development","tags":["typescript","javascript","types","tooling"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null

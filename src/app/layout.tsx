@@ -4,29 +4,30 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Providers from '@/components/Providers'
 import LayoutWrapper from '@/components/LayoutWrapper'
-import React from "react";
+import React from 'react'
 
 export const metadata: Metadata = {
-    title: 'Mevlüt Mert ÇİL | Full Stack Developer',
-    description: 'Portfolio of a full-stack developer',
+  title: 'Mevlut Mert CIL | Full Stack Developer',
+  description: 'Portfolio of a full-stack developer',
 }
 
 export default function RootLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode
+  children: React.ReactNode
 }) {
-    return (
-        <html lang="en">
-            <body>
-                <Providers>
-                    <LayoutWrapper>
-                        <Header />
-                        {children}
-                        <Footer />
-                    </LayoutWrapper>
-                </Providers>
-            </body>
-        </html>
-    )
+  return (
+    <html lang="en">
+      <body>
+        <Providers>
+          <LayoutWrapper>
+            <Header />
+            {children}
+            <Footer />
+          </LayoutWrapper>
+        </Providers>
+      </body>
+    </html>
+  )
 }
+

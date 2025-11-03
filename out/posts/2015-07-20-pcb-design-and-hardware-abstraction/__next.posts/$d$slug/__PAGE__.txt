@@ -1,0 +1,67 @@
+1:"$Sreact.fragment"
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+3:T1234,<h1>PCB Design and Hardware Abstraction: From Schematic to Manufacturing</h1>
+<p>Hardware design bridges the gap between physics and software. After working on multiple PCB projects during my internships, I've learned that great hardware design requires the same attention to abstraction as great software design.</p>
+<p>Constraints stack up quickly: component lead times, thermal budgets, and EMC requirements compete with cost targets. Successful designs balance these factors while still leaving room for firmware teams to iterate.</p>
+<h2>From Schematic to PCB</h2>
+<p>The traditional PCB design flow is:</p>
+<ol>
+<li><strong>Schematic Design</strong> - Circuit theory comes alive</li>
+<li><strong>Component Selection</strong> - Balancing cost, availability, performance</li>
+<li><strong>Layout</strong> - The art of routing without signal integrity issues</li>
+<li><strong>Manufacturing</strong> - Dealing with real-world tolerances</li>
+</ol>
+<h2>Tools of the Trade</h2>
+<ul>
+<li><strong>ARES</strong> (PCB Layout) - Handling trace routing and layer management</li>
+<li><strong>Orcad</strong> (PSpice) - Simulation before manufacturing</li>
+<li><strong>Proteus</strong> - Integration of schematic and simulation</li>
+<li><strong>Cadence</strong> - Professional-grade design for complex projects</li>
+</ul>
+<h2>The Voltage Source Circuit Project</h2>
+<p>One of my early projects was designing a DC voltage source with adjustable output (-5V, +5V, and everything in between).</p>
+<pre><code>Components:
+- AC Input → Transformer → Rectifier Bridge
+- Smoothing Capacitor (filtering)
+- 555 Timer IC (oscillator/function generator)
+- Potentiometer (variable output)
+- Voltage Regulator (stabilization)
+</code></pre>
+<h2>Signal Integrity Challenges</h2>
+<p>When designing PCBs, you quickly learn that traces aren't just wires:</p>
+<pre><code>- Track width affects impedance
+- Via placement impacts signal quality
+- Ground planes reduce noise
+- Layer stackup determines signal propagation
+</code></pre>
+<h2>Hardware Abstraction in Firmware</h2>
+<p>Good firmware abstracts hardware complexity:</p>
+<pre><code class="language-c">// Hardware-specific code isolated
+hal_gpio_set_pin(GPIO_PORT_A, PIN_5, HIGH);
+hal_spi_send_byte(0xAA);
+
+// Application code remains hardware-agnostic
+sensor_read_value();
+actuator_move_to_position(target);
+</code></pre>
+<h2>Lessons Learned</h2>
+<ul>
+<li><strong>Design for manufacturability</strong> - Tight tolerances cost exponentially more</li>
+<li><strong>Simulate before building</strong> - PSpice and VHDL simulators are invaluable</li>
+<li><strong>Test early</strong> - Prototype with breadboards and oscilloscopes</li>
+<li><strong>Documentation matters</strong> - Future you will thank present you</li>
+</ul>
+<p>The intersection of hardware and software is where true embedded systems engineering happens.</p>
+<h2>Design for Manufacturability and Testing</h2>
+<p>Collaborate with fabrication partners early to understand panelization, drill tolerances, and recommended copper weights. Add test pads, fiducials, and headers that make bring-up faster. Boundary-scan (JTAG) and in-circuit test fixtures can save weeks of debugging by catching solder bridges or component swaps before boards reach engineers.</p>
+<h2>Firmware Collaboration and Iteration</h2>
+<p>Hardware abstraction layers pay dividends when silicon changes. By keeping register-level access in one module, we swapped microcontrollers late in the project without rewriting every driver. Pair firmware releases with hardware ECOs and maintain versioned schematics, BOMs, and datasheets so cross-functional teams stay synchronized. The line between hardware and software blurs, and the best teams embrace it.</p>
+<h2>Supply Chain and Lifecycle Management</h2>
+<p>Component shortages can derail timelines. Track alternative part numbers, build relationships with distributors, and maintain a component library that flags end-of-life notices early. During design reviews, verify that footprints match available packages and that thermal requirements align with enclosure constraints. Lifecycle thinking ensures products remain manufacturable years after launch.</p>
+<h2>Collaboration with Manufacturing Partners</h2>
+<p>Invite fabrication and assembly partners into early design discussions. They catch DFM (design for manufacturability) issues like insufficient solder mask clearance or impossible reflow profiles. After first articles, hold joint retrospectives to refine test fixtures, pick-and-place programs, and inspection criteria. These partnerships transform the handoff from engineering to production into a smooth, repeatable process.</p>0:{"buildId":"7Bpo8tNK9QtQ6qNo25Lcp","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"PCB Design and Hardware Abstraction: From Schematic to Manufacturing","date":"2015-07-20","author":"Mevlut Mert CIL","category":"Hardware Design","tags":["pcb","hardware","design","proteus","orcad"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
+5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
+8:null
