@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/be0da13af251a44b.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
 6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
 3:Tec9,<h1>Remote Work Infrastructure: Building Tools for Distributed Teams</h1>
@@ -71,7 +71,7 @@ jobs:
 <h2>Onboarding and Knowledge Retention</h2>
 <p>Remote onboarding demands intentional structure. Create checklists for first-week access, pair new hires with mentors, and schedule cross-functional introductions. Record product demos and architecture overviews so new teammates can revisit content asynchronously. Maintain a living handbook with policies, communication norms, and technical runbooks to prevent institutional knowledge from disappearing.</p>
 <h2>Resilience and Business Continuity</h2>
-<p>Distributed operations must survive regional outages or geopolitical events. Mirror critical services across clouds or data centers, replicate backups to multiple regions, and practice failover drills. Document escalation paths that account for time zones and ensure decision-making authority exists in every region. Remote work thrives when continuity plans are robust.</p>0:{"buildId":"YAj4gSoDaYA4ButsZzxgu","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"Remote Work Infrastructure: Building Tools for Distributed Teams","date":"2020-04-15","author":"Mevlut Mert CIL","category":"DevOps","tags":["remote","infrastructure","collaboration","devops"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+<p>Distributed operations must survive regional outages or geopolitical events. Mirror critical services across clouds or data centers, replicate backups to multiple regions, and practice failover drills. Document escalation paths that account for time zones and ensure decision-making authority exists in every region. Remote work thrives when continuity plans are robust.</p>0:{"buildId":"7Eya7rACpqsxVH_-5tsT8","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"Remote Work Infrastructure: Building Tools for Distributed Teams","date":"2020-04-15","author":"Mevlut Mert CIL","category":"DevOps","tags":["remote","infrastructure","collaboration","devops"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
 4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
 5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
 8:null

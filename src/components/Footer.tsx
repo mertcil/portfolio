@@ -16,7 +16,7 @@ const FooterInner = styled('div')({
 })
 
 const FooterText = styled('p')(({ theme }) => ({
-  color: theme.palette.text.secondary,
+  color: theme.palette.mode === 'dark' ? theme.palette.text.secondary : '#ffffff',
   margin: 0,
   fontSize: '0.875rem',
 }))

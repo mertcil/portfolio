@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/be0da13af251a44b.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
 6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
 3:Te1b,<h1>AI-Assisted Development: GitHub Copilot and Beyond</h1>
@@ -44,7 +44,7 @@ Result: Copilot generates complete, well-structured component with proper hooks 
 <h2>Measuring Developer Sentiment</h2>
 <p>Quantitative data is useful, but qualitative feedback uncovers friction. Run surveys every quarter asking engineers about suggestion relevance, trustworthiness, and preferred workflows. Host roundtables where teams share tips, frustrations, and success stories. Use insights to refine training materials and backlog priorities—for instance, building custom snippets for internal APIs or adjusting policies to allow safe experimentation.</p>
 <h2>Future Outlook</h2>
-<p>AI assistance will soon extend beyond code editors. Expect design tools that generate UI variations, infrastructure platforms that draft Terraform modules, and security scanners that suggest remediations in plain language. Prepare now by building cross-functional committees that evaluate new tools, assess risk, and stage rollouts. Organizations that practice continuous learning around AI will adapt gracefully as the landscape shifts.</p>0:{"buildId":"YAj4gSoDaYA4ButsZzxgu","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"AI-Assisted Development: GitHub Copilot and Beyond","date":"2022-03-18","author":"Mevlut Mert CIL","category":"Developer Tools","tags":["ai","copilot","productivity","automation"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+<p>AI assistance will soon extend beyond code editors. Expect design tools that generate UI variations, infrastructure platforms that draft Terraform modules, and security scanners that suggest remediations in plain language. Prepare now by building cross-functional committees that evaluate new tools, assess risk, and stage rollouts. Organizations that practice continuous learning around AI will adapt gracefully as the landscape shifts.</p>0:{"buildId":"7Eya7rACpqsxVH_-5tsT8","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"AI-Assisted Development: GitHub Copilot and Beyond","date":"2022-03-18","author":"Mevlut Mert CIL","category":"Developer Tools","tags":["ai","copilot","productivity","automation"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
 4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
 5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
 8:null

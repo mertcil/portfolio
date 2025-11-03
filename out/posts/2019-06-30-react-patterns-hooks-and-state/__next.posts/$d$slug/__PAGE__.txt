@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/be0da13af251a44b.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
 6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
 3:T21d6,<h1>React Patterns: Hooks, State Management, and Functional Components</h1>
@@ -219,7 +219,7 @@ function ParentComponent() {
 <h2>Accessibility and Inclusive Design</h2>
 <p>Hooks make it easier to create reusable accessibility primitives. Build custom hooks for managing focus, announcing live regions, and handling keyboard controls. Pair them with testing libraries that simulate assistive technology interactions. Inclusive design is not optional; it expands your product’s reach and demonstrates empathy for every user.</p>
 <h2>Collaboration with Design and Product</h2>
-<p>Establish shared vocabularies between designers and engineers—component inventories, state diagrams, and interaction specs. Use collaborative tools like Figma and Storybook to keep discussions grounded in real components. When everyone understands how state flows through the UI, product iterations accelerate without sacrificing quality.</p>0:{"buildId":"YAj4gSoDaYA4ButsZzxgu","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"React Patterns: Hooks, State Management, and Functional Components","date":"2019-06-30","author":"Mevlut Mert CIL","category":"Frontend Development","tags":["react","javascript","hooks","state","functional-components"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+<p>Establish shared vocabularies between designers and engineers—component inventories, state diagrams, and interaction specs. Use collaborative tools like Figma and Storybook to keep discussions grounded in real components. When everyone understands how state flows through the UI, product iterations accelerate without sacrificing quality.</p>0:{"buildId":"7Eya7rACpqsxVH_-5tsT8","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"React Patterns: Hooks, State Management, and Functional Components","date":"2019-06-30","author":"Mevlut Mert CIL","category":"Frontend Development","tags":["react","javascript","hooks","state","functional-components"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
 4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
 5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
 8:null

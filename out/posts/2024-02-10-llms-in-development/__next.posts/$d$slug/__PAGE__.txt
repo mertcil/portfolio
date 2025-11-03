@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/be0da13af251a44b.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
 6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
 3:T1daa,<h1>Large Language Models in Software Development: Beyond Copilot</h1>
@@ -73,7 +73,7 @@ describe('calculateOrderTotal', () => {
 <p>Create dashboards that correlate usage with outcomes. If bug counts spike after heavy AI assistance, invest in better guardrails or more targeted training. Conversely, if onboarding time drops, celebrate and share the playbook company-wide.</p>
 <h2>Human Factors and Change Management</h2>
 <p>LLM tooling changes workflows and expectations. Communicate early about what success looks like, how data privacy is protected, and how performance evaluations will incorporate AI collaboration. Offer opt-in pilot groups, gather qualitative feedback, and adapt the rollout based on real-world experience.</p>
-<p>Respect individual preferences—some engineers prefer lightweight chat interfaces, others want IDE integrations. Provide training for both and ensure accessibility for neurodiverse teammates by offering multiple interaction modalities (speech, text, visual prompts). AI adoption thrives when humans feel supported, not coerced.</p>0:{"buildId":"YAj4gSoDaYA4ButsZzxgu","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"Large Language Models in Software Development: Beyond Copilot","date":"2024-02-10","author":"Mevlut Mert CIL","category":"AI & Machine Learning","tags":["llm","ai","development","gpt","claude"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+<p>Respect individual preferences—some engineers prefer lightweight chat interfaces, others want IDE integrations. Provide training for both and ensure accessibility for neurodiverse teammates by offering multiple interaction modalities (speech, text, visual prompts). AI adoption thrives when humans feel supported, not coerced.</p>0:{"buildId":"7Eya7rACpqsxVH_-5tsT8","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"Large Language Models in Software Development: Beyond Copilot","date":"2024-02-10","author":"Mevlut Mert CIL","category":"AI & Machine Learning","tags":["llm","ai","development","gpt","claude"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
 4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
 5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
 8:null

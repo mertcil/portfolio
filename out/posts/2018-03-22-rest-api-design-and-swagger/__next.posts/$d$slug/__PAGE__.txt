@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/be0da13af251a44b.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
 6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
 3:T2207,<h1>REST API Design and Swagger: Building Self-Documenting APIs</h1>
@@ -189,7 +189,7 @@ public ResponseEntity&#x3C;?> list(@RequestHeader("API-Version") String version)
 <p>Well-designed APIs come with a welcoming developer experience. Publish your OpenAPI specs to a developer portal, include code samples in multiple languages, and document rate limits plus authentication flows clearly. Establish an API style guide that covers naming conventions, pagination formats, and standard error payloads. Governance ensures consistency across services, making the entire platform feel cohesive to internal and external consumers alike.</p>
 <h2>Lifecycle Management and Version Strategy</h2>
 <p>APIs evolve. Plan deprecation policies from the start—announce changes, offer migration guides, and provide sandbox environments for testing. Use semantic versioning in OpenAPI specs, but keep public URLs stable whenever possible. Batching breaking changes into predictable release trains reduces churn for consumers.</p>
-<p>Monitor usage analytics to understand which endpoints drive value. Sunsetting underused APIs frees resources for investments elsewhere. Pair analytics with consumer feedback channels to prioritize enhancements that improve developer satisfaction and product impact.</p>0:{"buildId":"YAj4gSoDaYA4ButsZzxgu","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"REST API Design and Swagger: Building Self-Documenting APIs","date":"2018-03-22","author":"Mevlut Mert CIL","category":"API Design","tags":["rest","api","swagger","openapi","documentation"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+<p>Monitor usage analytics to understand which endpoints drive value. Sunsetting underused APIs frees resources for investments elsewhere. Pair analytics with consumer feedback channels to prioritize enhancements that improve developer satisfaction and product impact.</p>0:{"buildId":"7Eya7rACpqsxVH_-5tsT8","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"REST API Design and Swagger: Building Self-Documenting APIs","date":"2018-03-22","author":"Mevlut Mert CIL","category":"API Design","tags":["rest","api","swagger","openapi","documentation"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
 4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
 5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
 8:null

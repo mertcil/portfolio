@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/e74c9376c5c2db22.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/be0da13af251a44b.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
 6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
 3:T20f9,<h1>Database Optimization: Indexing, Query Planning, and Caching</h1>
@@ -58,7 +58,7 @@ const getCachedUser = async (userId) => {
 <p>Databases grow alongside the business. Forecast capacity by analyzing historical growth, business projections, and new feature roadmaps. Build runbooks that describe when to scale vertically versus horizontally, and test failover to ensure replicas can assume the primary role quickly. For cloud databases, keep an eye on storage IOPS and network egress—silent cost drivers that sneak up without proper tagging and monitoring.</p>
 <p>When budgets tighten, archived data, columnar warehouses, or data lakes can offload analytics to cheaper platforms. Maintain clear data contracts so analysts know where to find truth and engineers avoid duplicating expensive queries.</p>
 <h2>Team Workflow and Tooling</h2>
-<p>Empower teams with shared dashboards, query snippet libraries, and office hours hosted by database specialists. Encourage code reviews that include migration scripts and schema changes, not just application code. A culture of knowledge sharing prevents the “database guru” anti-pattern and ensures optimizations survive team transitions.</p>0:{"buildId":"YAj4gSoDaYA4ButsZzxgu","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"Database Optimization: Indexing, Query Planning, and Caching","date":"2023-09-25","author":"Mevlut Mert CIL","category":"Database","tags":["database","sql","optimization","performance"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+<p>Empower teams with shared dashboards, query snippet libraries, and office hours hosted by database specialists. Encourage code reviews that include migration scripts and schema changes, not just application code. A culture of knowledge sharing prevents the “database guru” anti-pattern and ensures optimizations survive team transitions.</p>0:{"buildId":"7Eya7rACpqsxVH_-5tsT8","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"Database Optimization: Indexing, Query Planning, and Caching","date":"2023-09-25","author":"Mevlut Mert CIL","category":"Database","tags":["database","sql","optimization","performance"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
 4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
 5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
 8:null
