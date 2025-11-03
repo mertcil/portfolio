@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/be0da13af251a44b.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/c93f1f3e7ef06991.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
 6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
 3:T178e,<h1>SAP and Enterprise Systems: ABAP Programming in the Real World</h1>
@@ -116,7 +116,7 @@ CALL FUNCTION 'CONVERT_OTF'.
 <h2>Modernization Pathways</h2>
 <p>Enterprises rarely rewrite SAP from scratch. Instead, they adopt side-by-side extensions, expose OData APIs, or implement Business Technology Platform (BTP) services that co-exist with ABAP cores. Establish clear criteria for when to extend within SAP versus offloading to microservices. Maintain integration maps and dependency charts to manage coupling thoughtfully.</p>
 <h2>Cross-Functional Collaboration</h2>
-<p>SAP work touches finance, procurement, HR, and legal teams. Engineers succeed when they speak the language of each department, align on KPIs, and schedule releases around fiscal close periods or regulatory deadlines. Cross-functional steering committees keep priorities aligned, escalate risks early, and ensure technology investments support strategic outcomes.</p>0:{"buildId":"7Eya7rACpqsxVH_-5tsT8","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"SAP and Enterprise Systems: ABAP Programming in the Real World","date":"2016-01-15","author":"Mevlut Mert CIL","category":"Enterprise Development","tags":["sap","abap","enterprise","erp","databases"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+<p>SAP work touches finance, procurement, HR, and legal teams. Engineers succeed when they speak the language of each department, align on KPIs, and schedule releases around fiscal close periods or regulatory deadlines. Cross-functional steering committees keep priorities aligned, escalate risks early, and ensure technology investments support strategic outcomes.</p>0:{"buildId":"tD0jk_Gh7Omp16oEf0tMN","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"SAP and Enterprise Systems: ABAP Programming in the Real World","date":"2016-01-15","author":"Mevlut Mert CIL","category":"Enterprise Development","tags":["sap","abap","enterprise","erp","databases"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
 4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
 5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
 8:null

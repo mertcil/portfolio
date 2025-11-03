@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/be0da13af251a44b.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
+2:I[50588,["/_next/static/chunks/e851924282456e89.js","/_next/static/chunks/f0dec9012faf9135.js","/_next/static/chunks/c93f1f3e7ef06991.js","/_next/static/chunks/a616032c9b907623.js"],"default"]
 6:I[15638,["/_next/static/chunks/397f9c9a727dd4de.js","/_next/static/chunks/ebf79ac48e104c07.js"],"OutletBoundary"]
 7:"$Sreact.suspense"
 3:T1340,<h1>Embedded Systems and Linux Kernels: Building Set-Top Box Firmware</h1>
@@ -59,7 +59,7 @@ static int __init device_driver_init(void) {
 <h2>Regulatory Certification and Quality</h2>
 <p>Consumer electronics often face regulatory tests—EMC, safety, emissions—that demand meticulous documentation. We maintained traceability from requirements to test cases, ensuring each firmware change linked back to compliance artifacts. Automated nightly builds produced binaries and release notes auditors could review on demand.</p>
 <h2>Cross-Functional Collaboration</h2>
-<p>Successful firmware depends on tight feedback loops with mechanical, electrical, and product teams. Weekly design reviews surfaced mechanical constraints that affected PCB trace lengths or antenna placement. Product managers provided user research that informed remote-control latency targets. By collaborating across disciplines, we delivered experiences that felt seamless to end users despite the underlying technical complexity.</p>0:{"buildId":"7Eya7rACpqsxVH_-5tsT8","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"Embedded Systems and Linux Kernels: Building Set-Top Box Firmware","date":"2015-03-12","author":"Mevlut Mert CIL","category":"Embedded Systems","tags":["linux","kernel","c++","embedded","firmware"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
+<p>Successful firmware depends on tight feedback loops with mechanical, electrical, and product teams. Weekly design reviews surfaced mechanical constraints that affected PCB trace lengths or antenna placement. Product managers provided user research that informed remote-control latency targets. By collaborating across disciplines, we delivered experiences that felt seamless to end users despite the underlying technical complexity.</p>0:{"buildId":"tD0jk_Gh7Omp16oEf0tMN","rsc":["$","$1","c",{"children":[["$","$L2",null,{"title":"Embedded Systems and Linux Kernels: Building Set-Top Box Firmware","date":"2015-03-12","author":"Mevlut Mert CIL","category":"Embedded Systems","tags":["linux","kernel","c++","embedded","firmware"],"htmlContent":"$3"}],["$L4"],"$L5"]}],"loading":null,"isPartial":false}
 4:["$","script","script-0",{"src":"/_next/static/chunks/a616032c9b907623.js","async":true}]
 5:["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]
 8:null

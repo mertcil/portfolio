@@ -362,13 +362,13 @@ export default function Contact() {
               </ContactContent>
             </ContactLink>
 
-            <ContactLink href="https://github.com/mertcil" target="_blank" rel="noopener noreferrer">
+            <ContactLink href="https://github.com/mmcil" target="_blank" rel="noopener noreferrer">
               <IconWrapper className="icon">
                 <GitHubIcon sx={{ color: 'white', fontSize: '22px' }} />
               </IconWrapper>
               <ContactContent>
                 <ContactLabel className="label">GitHub</ContactLabel>
-                <ContactValue className="value">@mertcil</ContactValue>
+                <ContactValue className="value">@mmcil</ContactValue>
               </ContactContent>
             </ContactLink>
           </ContactList>
